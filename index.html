@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACSP — фильтры, сепараторы и расходники для компрессоров</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
+
+<header class="site-header">
+  <a href=" " class="logo">
+    < img src="images/logo/logo.png" alt="ACSP">
+  </a >
+
+  <nav class="main-nav">
+    <a href="about.html">О нас</a >
+
+    <div class="nav-dropdown">
+      <a href="catalog.html">Каталог</a >
+      <div class="dropdown-menu">
+        <a href="dryers.html">Осушители</a >
+        <a href="filters.html">Фильтры</a >
+        <a href="parts-valves.html">Запчасти и клапаны</a >
+        <a href="oils.html">Компрессорные масла</a >
+      </div>
+    </div>
+
+    <a href="news.html">Новости</a >
+    <a href="resources.html">Технические ресурсы</a >
+    <a href="dealers.html">Партнёрам</a >
+    <a href="contacts.html">Контакты</a >
+  </nav>
+
+  <div class="header-actions">
+    <a href="#" class="header-icon">●</a >
+    <a href="#" class="header-icon">✈</a >
+    <a href="#" class="header-icon">✉</a >
+    <button class="search-icon" type="button">⌕</button>
+    <a href="#" class="lang">RU</a >
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. Первый экран -->
+  <section class="hero">
+    <div class="hero-inner">
+      < img class="hero-logo" src="images/logo/logo.png" alt="ACSP">
+
+      <h1>Фильтры, сепараторы и расходники для винтовых компрессоров</h1>
+
+      <form class="catalog-search" action="catalog.html">
+        <input type="text" name="q" placeholder="OE-номер или модель компрессора">
+        <button type="submit">Подобрать</button>
+      </form>
+    </div>
+
+    <div class="hero-image"></div>
+  </section>
+
+
+  <!-- 2. Раскрывающиеся карточки -->
+  <section class="hover-section">
+    <div class="acsp-hover-slider">
+      <div class="acsp-card acsp-card-1">
+        <div class="acsp-overlay"></div>
+        <div class="acsp-content">
+          <h2>Наши технологии</h2>
+          <p>Премиум материалы + бережливое производство = превосходное качество</p >
+          <a href="resources.html">Узнать о технологиях</a >
+        </div>
+      </div>
+
+      <div class="acsp-card acsp-card-2">
+        <div class="acsp-overlay"></div>
+        <div class="acsp-content">
+          <h2>Сотрудничество</h2>
+          <p>Три ключевых преимущества для роста вашего дилерского бизнеса</p >
+          <a href="dealers.html">Связаться</a >
+        </div>
+      </div>
+
+      <div class="acsp-card acsp-card-3">
+        <div class="acsp-overlay"></div>
+        <div class="acsp-content">
+          <h2>Новые продукты</h2>
+          <p>Снижение затрат и повышение качества работы компрессорных систем</p >
+          <a href="catalog.html">Посмотреть</a >
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 3. Переключаемый каталог -->
+  <section class="catalog-tabs-section">
+    <div class="catalog-tabs-wrap">
+
+      <div class="catalog-tabs">
+        <button class="catalog-tab active" data-tab="dryers">Осушители и очистка воздуха</button>
+        <button class="catalog-tab" data-tab="filters">Фильтры и сепараторы</button>
+        <button class="catalog-tab" data-tab="parts">Запчасти и клапаны</button>
+        <button class="catalog-tab" data-tab="oils">Компрессорные масла</button>
+      </div>
+
+      <div class="catalog-preview">
+        <div class="catalog-preview-image">
+          < img id="catalogImage" src="images/catalog/dryers.webp" alt="Осушители и очистка воздуха">
+        </div>
+
+        <div class="catalog-preview-content">
+          <h2 id="catalogTitle">Осушители и очистка воздуха</h2>
+          <p id="catalogText">
+            Адсорбционные и рефрижераторные осушители, комплекты магистральных фильтров для подготовки сухого и чистого сжатого воздуха.
+          </p >
+          <a id="catalogLink" href="dryers.html">Перейти в каталог</a >
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 4. Три колонки -->
+  <section class="benefits">
+    <h2>Три ключевых преимущества для роста вашего дилерского бизнеса</h2>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">100%</div>
+        <p>отбор качественных фильтрующих материалов по стандарту OE</p >
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">20 000+</div>
+        <p>база аналогов под ведущие мировые бренды: Atlas Copco, Ingersoll Rand и другие</p >
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">1-Step</div>
+        <p>единая платформа закупки фильтров, масел и электромеханических запчастей</p >
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
