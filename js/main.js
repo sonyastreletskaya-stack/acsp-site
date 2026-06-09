@@ -1,34 +1,42 @@
 const catalogData = {
   dryers: {
-    image: "images/catalog/dryers.webp",
+    image: "images/dryers.jpg",
     title: "Осушители и очистка воздуха",
-    text: "Адсорбционные и рефрижераторные осушители, комплекты магистральных фильтров для подготовки сухого и чистого сжатого воздуха.",
+    description:
+      "Адсорбционные и рефрижераторные осушители, комплекты магистральных фильтров для подготовки сухого и чистого сжатого воздуха.",
     link: "dryers.html"
   },
+
   filters: {
-    image: "images/catalog/filters.webp",
+    image: "images/filters.jpg",
     title: "Фильтры и сепараторы",
-    text: "Магистральные фильтры, воздушные фильтры, масляные фильтры и сепараторы для винтовых компрессоров.",
+    description:
+      "Магистральные фильтры, воздушные фильтры, масляные фильтры и сепараторы для винтовых компрессоров.",
     link: "filters.html"
   },
+
   parts: {
-    image: "images/catalog/parts-valves.webp",
+    image: "images/parts-valves.jpeg",
     title: "Запчасти и клапаны",
-    text: "Клапаны, датчики, ремкомплекты и электромеханические компоненты для обслуживания компрессорного оборудования.",
+    description:
+      "Клапаны, датчики, ремкомплекты и электромеханические компоненты для обслуживания компрессорного оборудования.",
     link: "parts-valves.html"
   },
+
   oils: {
-    image: "images/catalog/oils.webp",
+    image: "images/oils.jpeg",
     title: "Компрессорные масла",
-    text: "Смазочные материалы для винтовых компрессоров, подобранные под интенсивную промышленную эксплуатацию.",
+    description:
+      "Смазочные материалы для винтовых компрессоров, подобранные под интенсивную промышленную эксплуатацию.",
     link: "oils.html"
   }
 };
 
 const tabs = document.querySelectorAll(".catalog-tab");
+
 const catalogImage = document.getElementById("catalogImage");
 const catalogTitle = document.getElementById("catalogTitle");
-const catalogText = document.getElementById("catalogText");
+const catalogDescription = document.getElementById("catalogDescription");
 const catalogLink = document.getElementById("catalogLink");
 
 tabs.forEach((tab) => {
@@ -38,13 +46,17 @@ tabs.forEach((tab) => {
 
     if (!item) return;
 
-    tabs.forEach((btn) => btn.classList.remove("active"));
+    tabs.forEach((button) => {
+      button.classList.remove("active");
+    });
+
     tab.classList.add("active");
 
     catalogImage.src = item.image;
     catalogImage.alt = item.title;
+
     catalogTitle.textContent = item.title;
-    catalogText.textContent = item.text;
+    catalogDescription.textContent = item.description;
     catalogLink.href = item.link;
   });
 });
