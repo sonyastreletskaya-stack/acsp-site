@@ -695,87 +695,110 @@ input {
 
 /* ЧЕТВЁРТЫЙ БЛОК */
 
+/* ФИНАЛЬНЫЙ ФИКС БЛОКА ПРЕИМУЩЕСТВ */
+
 .benefits {
-  padding: 90px 24px 110px;
-  background: #2899e6;
-  text-align: center;
+  width: 100% !important;
+  padding: 90px 24px 110px !important;
+  background: #2899e6 !important;
+  text-align: center !important;
+  overflow: hidden !important;
 }
 
 .benefits h2 {
-  max-width: 980px;
-  margin: 0 auto 54px;
+  width: min(1050px, 100%) !important;
+  margin: 0 auto 58px !important;
 
-  font-size: 42px;
-  line-height: 1.22;
-  font-weight: 800;
+  font-size: 42px !important;
+  line-height: 1.22 !important;
+  font-weight: 800 !important;
 
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .benefits-grid {
-  width: min(1080px, 100%);
-  margin: 0 auto;
+  width: min(1180px, 100%) !important;
+  margin: 0 auto !important;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: start;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+
+  gap: 0 !important;
+  transform: none !important;
 }
 
 .benefit-card {
-  position: relative;
+  position: relative !important;
 
-  min-height: 430px;
-  padding: 0 44px;
+  flex: 0 0 33.333% !important;
+  max-width: 360px !important;
+  min-width: 0 !important;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding: 0 42px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 .benefit-card:not(:last-child)::after {
-  content: "";
+  content: "" !important;
 
-  position: absolute;
-  right: 0;
-  top: 140px;
+  position: absolute !important;
+  right: 0 !important;
+  top: 150px !important;
 
-  width: 2px;
-  height: 190px;
+  width: 2px !important;
+  height: 185px !important;
 
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.72) !important;
 }
 
 .benefit-icon {
-  width: 100%;
-  max-width: 260px;
-  height: 125px;
+  width: 190px !important;
+  max-width: 190px !important;
+  height: 105px !important;
 
-  object-fit: cover;
-  display: block;
+  object-fit: cover !important;
+  display: block !important;
 
-  margin: 0 auto 28px;
+  margin: 0 auto 30px !important;
 }
 
 .benefit-number {
-  margin: 0 0 18px;
+  display: block !important;
 
-  font-size: 64px;
-  line-height: 1;
-  font-weight: 800;
+  width: 100% !important;
+  margin: 0 0 18px !important;
 
-  color: #ffffff;
-  white-space: nowrap;
+  font-size: 64px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+
+  color: #ffffff !important;
+  white-space: nowrap !important;
+  text-align: center !important;
 }
 
 .benefit-card p {
-  max-width: 270px;
-  margin: 0 auto;
+  width: 100% !important;
+  max-width: 260px !important;
+  margin: 0 auto !important;
 
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
 
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-align: center !important;
+}
+
+/* НА ВСЯКИЙ СЛУЧАЙ УБИРАЕМ СТАРЫЕ ЛЕВЫЕ СДВИГИ */
+.benefits *,
+.benefits-grid *,
+.benefit-card * {
+  box-sizing: border-box !important;
 }
 
 
