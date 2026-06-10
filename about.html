@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>О компании ACSP</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">
+    <img src="images/logo2.png" alt="ACSP">
+  </a>
+
+  <nav class="main-nav">
+    <a href="about.html">О нас</a>
+
+    <div class="nav-item">
+      <a href="catalog.html" class="catalog-link">
+        Каталог <span class="catalog-arrow">▼</span>
+      </a>
+
+      <div class="dropdown catalog-dropdown">
+        <a href="catalog.html" class="dropdown-main-link">Общий каталог</a>
+
+        <div class="dropdown-group">
+          <a href="category.html?type=dryers" class="dropdown-title">Осушители</a>
+          <a href="category.html?type=dryers-adsorption">Адсорбционные осушители</a>
+          <a href="category.html?type=dryers-refrigerated">Рефрижераторные осушители</a>
+          <a href="category.html?type=main-filter-kits">Набор магистральных фильтров</a>
+        </div>
+
+        <div class="dropdown-group">
+          <a href="category.html?type=filters" class="dropdown-title">Фильтры и сепараторы</a>
+          <a href="category.html?type=air-filters">Воздушные фильтры</a>
+          <a href="category.html?type=oil-filters">Масляные фильтры</a>
+          <a href="category.html?type=separators">Сепараторы</a>
+          <a href="category.html?type=mainline-filters">Магистральные фильтры</a>
+        </div>
+
+        <div class="dropdown-group">
+          <a href="parts-valves.html" class="dropdown-title">Запчасти и клапаны</a>
+          <a href="category.html?type=motors">Электродвигатели</a>
+          <a href="category.html?type=inverters">Частотные преобразователи</a>
+          <a href="category.html?type=drain-valves">Конденсатоотводчики</a>
+          <a href="category.html?type=solenoid-valves">Электромагнитные клапаны</a>
+        </div>
+
+        <div class="dropdown-group">
+          <a href="category.html?type=oils" class="dropdown-title">Компрессорные масла</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="news.html">Новости</a>
+    <a href="resources.html">Технические ресурсы</a>
+    <a href="dealers.html">Партнёрам</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+
+  <div class="header-actions">
+    <a href="#" class="header-icon" aria-label="Max">
+      <img src="images/max.png" alt="Max">
+    </a>
+
+    <a href="#" class="header-icon" aria-label="VK">
+      <img src="images/vk.png" alt="VK">
+    </a>
+
+    <a href="#" class="header-icon" aria-label="Telegram">
+      <img src="images/telegram.png" alt="Telegram">
+    </a>
+
+    <a href="mailto:ACSP2026@yandex.ru" class="header-icon" aria-label="Mail">
+      <img src="images/mail.png" alt="Mail">
+    </a>
+
+    <button class="header-search" type="button">⌕</button>
+    <a href="#" class="lang">RU</a>
+  </div>
+
+  <form class="header-search-panel" action="catalog.html">
+    <input type="text" name="q" placeholder="Введите артикул, OE-номер или модель компрессора">
+    <button type="submit">Искать</button>
+  </form>
+</header>
+
+
+<main class="about-page">
+
+  <!-- 1. ACSP ЭТО -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
+
+      <div class="about-hero-content">
+        <h1>ACSP — это</h1>
+
+        <div class="about-values-grid">
+
+          <article class="about-value-card">
+            <img src="images/about-air.png" alt="Воздух">
+            <h3>A — Воздух</h3>
+            <p>
+              Глубокая экспертиза в технологиях подготовки и очистки промышленного воздуха.
+            </p>
+          </article>
+
+          <article class="about-value-card">
+            <img src="images/about-compressor.png" alt="Компрессор">
+            <h3>C — Компрессор</h3>
+            <p>
+              Поставка силовых установок, спроектированных для работы в режиме интенсивных нагрузок.
+            </p>
+          </article>
+
+          <article class="about-value-card">
+            <img src="images/about-system.png" alt="Система">
+            <h3>S — Система</h3>
+            <p>
+              Мы рассматриваем компрессор, периферийное оборудование и автоматику как единый механизм.
+            </p>
+          </article>
+
+          <article class="about-value-card">
+            <img src="images/about-platform.png" alt="Платформа">
+            <h3>P — Платформа</h3>
+            <p>
+              Формат «одного окна» для снабжения предприятий: от станций до оригинальных запчастей.
+            </p>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="about-hero-image">
+        <img src="images/about-hero-filters.png" alt="Фильтры ACSP">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 2. ТРИ ПРИНЦИПА -->
+  <section class="about-principles">
+    <div class="about-principles-inner">
+
+      <article class="about-principle-card">
+        <h3>Опыт + энергия</h3>
+        <p>
+          Именно сочетание опыта и энергии позволяет нам быстро реагировать на реальные потребности российских клиентов
+          и напрямую работать с цепочкой поставок производственных баз в Китае.
+        </p>
+      </article>
+
+      <article class="about-principle-card">
+        <h3>Небольшая команда</h3>
+        <p>
+          Нас немного — а значит, вы общаетесь не с многоступенчатой службой поддержки,
+          а с людьми, которые действительно знают продукт и принимают решения.
+        </p>
+      </article>
+
+      <article class="about-principle-card">
+        <h3>Мост между Китаем и Россией</h3>
+        <p>
+          Свою роль мы видим как мост между Китаем и Россией: доставляем технологический интеллект
+          и производственную мощь Китая на каждый промышленный объект в России.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- 3. ДОВЕРИЕ И ПРОИЗВОДСТВО -->
+  <section class="about-trust">
+    <div class="about-trust-inner">
+
+      <div class="about-trust-top">
+        <div class="about-trust-text">
+          <h2>Нам доверяют по всему миру</h2>
+          <p>
+            ACSP поставляет решения по фильтрации в 10 стран. Нашими комплектующими оснащают
+            компрессорное оборудование сервисные центры, дистрибьюторы и промышленные предприятия.
+          </p>
+
+          <div class="about-stats">
+            <div>
+              <strong>10</strong>
+              <span>стран присутствия</span>
+            </div>
+
+            <div>
+              <strong>124</strong>
+              <span>совместимых бренда</span>
+            </div>
+
+            <div>
+              <strong>20 000+</strong>
+              <span>позиций в базе аналогов</span>
+            </div>
+          </div>
+        </div>
+
+        <img src="images/about-production-main.png" alt="Производство ACSP">
+      </div>
+
+      <div class="about-production-grid">
+        <div class="about-production-text">
+          <h2>Собственное производство</h2>
+          <p>
+            Каждый элемент проходит выходной контроль. Мы используем фильтроматериалы H&V и Ahlstrom,
+            усиленные опорные структуры и промышленные уплотнения.
+          </p>
+
+          <div class="about-production-icons">
+            <span>100% контроль</span>
+            <span>Премиальные материалы</span>
+            <span>Современное оборудование</span>
+            <span>Устойчивость к нагрузкам</span>
+          </div>
+        </div>
+
+        <img src="images/about-production-line.png" alt="Производственная линия">
+        <img src="images/about-factory.png" alt="Здание производства ACSP">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 4. СОВМЕСТИМЫЕ БРЕНДЫ -->
+  <section class="about-brands">
+    <div class="about-brands-inner">
+
+      <div class="about-brands-head">
+        <img src="images/logo.png" alt="ACSP">
+        <p>Поставляет комплектующие для ведущих мировых производителей компрессорного оборудования</p>
+        <h2>Основные совместимые бренды</h2>
+      </div>
+
+      <div class="about-brands-banner">
+        <div>
+          <h3>Совместимые бренды</h3>
+          <p>
+            Широкий ассортимент комплектующих для большинства популярных воздушных компрессоров.
+          </p>
+
+          <div class="about-brands-stats">
+            <span><strong>124</strong> бренда совместимы</span>
+            <span><strong>10</strong> стран охвата</span>
+          </div>
+        </div>
+
+        <img src="images/about-brands-banner.png" alt="Совместимые бренды ACSP">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 5. МОЛОДАЯ КОМАНДА -->
+  <section class="about-team">
+    <div class="about-team-inner">
+
+      <div class="about-team-text">
+        <p class="about-label">О компании</p>
+
+        <h2>
+          Молодая команда.<br>
+          Опытные специалисты.<br>
+          Прозрачные правила.
+        </h2>
+
+        <p>
+          ACSP — новая компания. У нас нет старых обязательств перед дилерами,
+          любимчиков и накопленных конфликтов. Условия для всех первых партнёров — равные и лучшие.
+        </p>
+
+        <div class="about-team-note">
+          Если вы выбираете партнёра не по возрасту бренда, а по конкретным условиям
+          и качеству общения — мы вам подходим.
+        </div>
+
+        <div class="about-team-numbers">
+          <div>
+            <strong>10+</strong>
+            <span>заводов-партнёров в Китае</span>
+          </div>
+
+          <div>
+            <strong>7</strong>
+            <span>складов в России и Беларуси</span>
+          </div>
+
+          <div>
+            <strong>1 ч</strong>
+            <span>ответ менеджера в Telegram</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-team-cards">
+        <article>
+          <h3>Свежий взгляд</h3>
+          <p>
+            Строим бизнес-модель с нуля по лучшим практикам европейских и азиатских B2B-платформ.
+          </p>
+        </article>
+
+        <article>
+          <h3>Скорость решений</h3>
+          <p>
+            Никакой бюрократии: менеджер отвечает в течение часа, а не недели.
+          </p>
+        </article>
+
+        <article>
+          <h3>Каждый партнёр важен</h3>
+          <p>
+            Каждый вопрос будет услышан, а каждое предложение основатели рассматривают лично.
+          </p>
+        </article>
+
+        <article>
+          <h3>Прямой доступ к заводам</h3>
+          <p>
+            Связи с производителями в Китае выстроены напрямую: короче цепочка поставки — заводская цена.
+          </p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 6. ФИНАЛЬНЫЙ БЛОК С КОМАНДОЙ -->
+  <section class="about-office">
+    <div class="about-office-inner">
+
+      <div class="about-office-images">
+        <img class="about-office-img-1" src="images/about-office-1.png" alt="Работа команды ACSP">
+        <img class="about-office-img-2" src="images/about-office-2.png" alt="Офис ACSP">
+        <img class="about-office-img-3" src="images/about-meeting.png" alt="Встреча команды ACSP">
+      </div>
+
+      <div class="about-office-text">
+        <h2>Мы объединяем:</h2>
+        <p>— опытных технических специалистов</p>
+        <p>— современный сервисный подход.</p>
+
+        <p>
+          Наша команда помогает клиентам <strong>быстро находить</strong>
+          необходимые комплектующие и <strong>снижать риски</strong> простоя оборудования.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <img src="images/logo.png" alt="ACSP">
+      </a>
+
+      <p>
+        Поставщик запчастей<br>
+        и решений по фильтрации<br>
+        для воздушных компрессоров
+      </p>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Max">
+          <img src="images/max.png" alt="Max">
+        </a>
+
+        <a href="#" aria-label="VK">
+          <img src="images/vk.png" alt="VK">
+        </a>
+
+        <a href="#" aria-label="Telegram">
+          <img src="images/telegram.png" alt="Telegram">
+        </a>
+
+        <a href="mailto:info@aether-tech.ru" aria-label="Mail">
+          <img src="images/mail.png" alt="Mail">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Каталог</h3>
+      <a href="category.html?type=dryers">Осушители</a>
+      <a href="category.html?type=filters">Фильтры<br>и сепараторы</a>
+      <a href="category.html?type=parts">Запчасти</a>
+      <a href="category.html?type=oils">Компрессорные<br>масла</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Поддержка</h3>
+      <a href="catalog.html">Подбор по OE-<br>номерам</a>
+      <a href="resources.html">Центр загрузок</a>
+      <a href="resources.html">Частые вопросы</a>
+    </div>
+
+    <div class="footer-column footer-contacts">
+      <h3>Контакты</h3>
+
+      <p>
+        Офис: г. Новосибирск,<br>
+        проспект Димитрова,<br>
+        дом 4/1, офис 12
+      </p>
+
+      <p>Производство: _____</p>
+
+      <p>
+        Почта:
+        <a href="mailto:info@aether-tech.ru">info@aether-tech.ru</a>
+      </p>
+
+      <p>Телефон: +7___ ___ __ __</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Дизайн и разработка сайта: GROOXO
+    <a href="https://sonyastreletskaya-stack.github.io/grooxo-site/" target="_blank" rel="noopener noreferrer"></a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

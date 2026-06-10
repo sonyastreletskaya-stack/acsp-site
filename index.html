@@ -15,20 +15,48 @@
   <a href="index.html" class="logo">
     <img src="images/logo2.png" alt="ACSP">
   </a>
-
-  <nav class="main-nav">
     <a href="about.html">О нас</a>
+<div class="nav-item">
+  <a href="catalog.html" class="catalog-link">
+    Каталог <span class="catalog-arrow">▼</span>
+  </a>
 
-    <div class="nav-item">
-      <a href="catalog.html">Каталог</a>
+  <div class="dropdown catalog-dropdown">
+    <a href="catalog.html" class="dropdown-main-link">Общий каталог</a>
 
-      <div class="dropdown">
-        <a href="dryers.html">Осушители</a>
-        <a href="filters.html">Фильтры и сепараторы</a>
-        <a href="parts-valves.html">Запчасти и клапаны</a>
-        <a href="oils.html">Компрессорные масла</a>
-      </div>
+    <div class="dropdown-group">
+      <a href="category.html?type=dryers" class="dropdown-title">Осушители</a>
+      <a href="category.html?type=dryers-adsorption">Адсорбционные осушители</a>
+      <a href="category.html?type=dryers-refrigerated">Рефрижераторные осушители</a>
+      <a href="category.html?type=main-filter-kits">Набор магистральных фильтров</a>
     </div>
+
+    <div class="dropdown-group">
+      <a href="category.html?type=filters" class="dropdown-title">Фильтры и сепараторы</a>
+      <a href="category.html?type=air-filters">Воздушные фильтры</a>
+      <a href="category.html?type=oil-filters">Масляные фильтры</a>
+      <a href="category.html?type=separators">Сепараторы</a>
+      <a href="category.html?type=mainline-filters">Магистральные фильтры</a>
+    </div>
+
+    <div class="dropdown-group">
+      <a href="category.html?type=parts" class="dropdown-title">Запчасти</a>
+      <a href="category.html?type=motors">Электродвигатели</a>
+      <a href="category.html?type=inverters">Частотные преобразователи</a>
+      <a href="category.html?type=drain-valves">Конденсатоотводчики</a>
+    </div>
+
+    <div class="dropdown-group">
+      <a href="category.html?type=valves" class="dropdown-title">Клапаны</a>
+      <a href="category.html?type=solenoid-valves">Электромагнитные клапаны</a>
+    </div>
+
+    <div class="dropdown-group">
+      <a href="category.html?type=oils" class="dropdown-title">Компрессорные масла</a>
+    </div>
+  </div>
+</div>
+
 
     <a href="news.html">Новости</a>
     <a href="resources.html">Технические ресурсы</a>
@@ -36,13 +64,33 @@
     <a href="contacts.html">Контакты</a>
   </nav>
 
-  <div class="header-actions">
-    <a href="#" class="header-icon">●</a>
-    <a href="#" class="header-icon">➤</a>
-    <a href="#" class="header-icon">✉</a>
-    <button class="header-search" type="button">⌕</button>
-    <a href="#" class="lang">RU</a>
-  </div>
+<div class="header-actions">
+  <a href="#" class="header-icon" aria-label="Max">
+    <img src="images/max.png" alt="Max">
+  </a>
+
+  <a href="#" class="header-icon" aria-label="VK">
+    <img src="images/vk.png" alt="VK">
+  </a>
+
+  <a href="#" class="header-icon" aria-label="Telegram">
+    <img src="images/telegram.png" alt="Telegram">
+  </a>
+
+  <a href="mailto:info@aether-tech.ru" class="header-icon" aria-label="Mail">
+    <img src="images/mail.png" alt="Mail">
+  </a>
+
+  <button class="header-search" type="button" aria-label="Открыть поиск">⌕</button>
+
+  <a href="#" class="lang">RU</a>
+</div>
+
+  <form class="header-search-panel" action="catalog.html">
+  <input type="text" name="q" placeholder="Введите артикул, OE-номер или модель компрессора">
+  <button type="submit">Искать</button>
+</form>
+
 </header>
 
 
@@ -99,6 +147,9 @@
     </div>
   </section>
 
+  <section class="catalog-intro">
+  <h2>ACSP: единый источник всех расходных запчастей для компрессоров</h2>
+</section>
 
   <!-- ТРЕТИЙ БЛОК: ПЕРЕКЛЮЧАЮЩИЙСЯ КАТАЛОГ -->
   <section class="catalog-tabs-section">
@@ -132,7 +183,7 @@
             Адсорбционные и рефрижераторные осушители, комплекты магистральных фильтров для подготовки сухого и чистого сжатого воздуха.
           </p>
 
-          <a id="catalogLink" href="dryers.html">Перейти в каталог</a>
+          <a id="catalogLink" href="category.html?type=dryers">Перейти в каталог</a>
         </div>
         </div>
 
@@ -146,28 +197,108 @@
 
     <div class="benefits-grid">
 
-      <div class="benefit-card">
-        <div class="benefit-number">100%</div>
-        <p>отбор качественных фильтрующих материалов по стандарту OE</p>
-      </div>
+<div class="benefits-grid">
 
-      <div class="benefit-card">
-        <div class="benefit-number">20 000+</div>
-        <p>база аналогов под ведущие мировые бренды: Atlas Copco, Ingersoll Rand и другие</p>
-      </div>
+  <div class="benefit-card">
+    <img class="benefit-icon" src="images/benefit-quality.png" alt="Качество">
+    <div class="benefit-number">100%</div>
+    <p>отбор качественных фильтрующих материалов по стандарту OE</p>
+  </div>
 
-      <div class="benefit-card">
-        <div class="benefit-number">1-Step</div>
-        <p>единая платформа закупки фильтров, масел и электромеханических запчастей</p>
-      </div>
+  <div class="benefit-card">
+    <img class="benefit-icon" src="images/benefit-base.png" alt="База аналогов">
+    <div class="benefit-number">20 000+</div>
+    <p>база аналогов под ведущие мировые бренды: Atlas Copco, Ingersoll Rand и другие</p>
+  </div>
+
+  <div class="benefit-card">
+    <img class="benefit-icon" src="images/benefit-onestep.png" alt="Единая платформа закупки">
+    <div class="benefit-number">1-Step</div>
+    <p>единая платформа закупки фильтров, масел и электромеханических запчастей</p>
+  </div>
+  </div>
+
 
     </div>
   </section>
 
 </main>
 
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <img src="images/logo.png" alt="ACSP">
+      </a>
+
+      <p>
+        Поставщик запчастей<br>
+        и решений по фильтрации<br>
+        для воздушных компрессоров
+      </p>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Max">
+          <img src="images/max.png" alt="Max">
+        </a>
+
+        <a href="#" aria-label="VK">
+          <img src="images/vk.png" alt="VK">
+        </a>
+
+        <a href="#" aria-label="Telegram">
+          <img src="images/telegram.png" alt="Telegram">
+        </a>
+
+        <a href="mailto:info@aether-tech.ru" aria-label="Mail">
+          <img src="images/mail.png" alt="Mail">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Каталог</h3>
+      <a href="category.html?type=dryers">Осушители</a>
+      <a href="category.html?type=filters">Фильтры<br>и сепараторы</a>
+      <a href="category.html?type=parts">Запчасти</a>
+      <a href="category.html?type=oils">Компрессорные<br>масла</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Поддержка</h3>
+      <a href="catalog.html">Подбор по OE-<br>номерам</a>
+      <a href="resources.html">Центр загрузок</a>
+      <a href="resources.html">Частые вопросы</a>
+    </div>
+
+    <div class="footer-column footer-contacts">
+      <h3>Контакты</h3>
+
+      <p>
+        Офис: г. Новосибирск,<br>
+        проспект Димитрова,<br>
+        дом 4/1, офис 12
+      </p>
+
+      <p>Производство: _____</p>
+
+      <p>
+        Почта:
+        <a href="mailto:info@aether-tech.ru">info@aether-tech.ru</a>
+      </p>
+
+      <p>Телефон: +7___ ___ __ __</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Дизайн и разработка сайта: GROOXO
+    <a href="https://sonyastreletskaya-stack.github.io/grooxo-site/" target="_blank" rel="noopener noreferrer"></a>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
 </html>
-21:06
