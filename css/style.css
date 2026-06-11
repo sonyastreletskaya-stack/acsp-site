@@ -455,7 +455,7 @@ input {
 /* ВТОРОЙ БЛОК */
 
 .hover-section {
-  padding: 5px 24px 30px;
+  padding: 60px 24px 30px;
   background: #2899e6;
 }
 
@@ -776,9 +776,9 @@ input {
 }
 
 .benefit-icon {
-  width: 190px !important;
-  max-width: 190px !important;
-  height: 105px !important;
+  width: 300px !important;
+  max-width: 300px !important;
+  height: 205px !important;
 
   object-fit: cover !important;
   display: block !important;
@@ -2162,91 +2162,207 @@ body.modal-open {
 
 /* СТРАНИЦА О КОМПАНИИ */
 
-.about-page {
-  background: #2899e6;
-  color: #ffffff;
-}
+/* ABOUT — ПЕРВЫЙ БЛОК ACSP С ФОНОМ */
 
+.about-acsp-hero {
+  position: relative;
+  min-height: calc(100vh - 78px);
+  padding: 86px 24px 96px;
 
-/* 1. HERO ACSP */
-
-.about-hero {
-  padding: 70px 24px 90px;
-  background:
-    linear-gradient(135deg, #2899e6 0%, #0f94d8 45%, #057fc4 100%);
-  box-shadow:
-    inset 0 28px 48px rgba(0, 0, 0, 0.18),
-    inset 0 -28px 48px rgba(0, 0, 0, 0.18);
-}
-
-.about-hero-inner {
-  width: min(1220px, 100%);
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 54px;
+  display: flex;
   align-items: center;
-}
 
-.about-hero h1 {
-  margin: 0 0 58px;
-
-  font-size: 64px;
-  line-height: 1.05;
-  font-weight: 800;
-
+  overflow: hidden;
+  background: #0897dd;
   color: #ffffff;
 }
 
-.about-values-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 46px 58px;
+.about-acsp-bg {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 151, 221, 0.96) 0%,
+      rgba(8, 151, 221, 0.86) 38%,
+      rgba(8, 151, 221, 0.72) 100%
+    ),
+    url("../images/about-acsp-dg.jpg") center right / cover no-repeat;
+
+  opacity: 1;
+  z-index: 0;
 }
 
-.about-value-card img {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
+.about-acsp-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 52%);
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-acsp-inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.about-acsp-top {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.about-acsp-logo {
+  width: 210px;
+  height: auto;
   display: block;
-  margin-bottom: 18px;
 }
 
-.about-value-card h3 {
-  margin: 0 0 16px;
-
-  font-size: 25px;
-  line-height: 1.25;
-  font-weight: 800;
-
-  color: #ffffff;
-}
-
-.about-value-card p {
+.about-acsp-top p {
   margin: 0;
 
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.35;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about-acsp-hero h1 {
+  margin: 0 0 54px;
+
+  font-size: 40px;
+  line-height: 1.12;
+  font-weight: 900;
 
   color: rgba(255, 255, 255, 0.92);
 }
 
-.about-hero-image {
-  min-height: 680px;
-  overflow: visible;
+.about-acsp-lines {
+  width: min(760px, 100%);
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 28px;
 }
 
-.about-hero-image img {
-  width: 115%;
-  max-width: none;
-  height: auto;
-  display: block;
-  object-fit: contain;
+.about-acsp-line {
+  display: grid;
+  grid-template-columns: 80px 190px 1fr;
+  gap: 28px;
+  align-items: center;
+
+  padding: 4px 0;
+}
+
+.about-acsp-line strong {
+  font-size: 58px;
+  line-height: 1;
+  font-weight: 900;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.about-acsp-line span {
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 900;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about-acsp-line p {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.48;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* Убираем старые первые блоки, если они остались в CSS/HTML */
+
+.about-hero-clean,
+.about-hero-lines,
+.about-hero-scheme-inner,
+.about-scheme,
+.about-letter-grid,
+.about-letter-card,
+.about-lines-inner {
+  display: none !important;
+}
+
+/* Адаптив */
+
+@media screen and (max-width: 900px) {
+  .about-acsp-hero {
+    min-height: auto;
+    padding: 58px 18px 76px;
+  }
+
+  .about-acsp-bg {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 151, 221, 0.94) 0%,
+        rgba(8, 151, 221, 0.88) 100%
+      ),
+      url("../images/about-acsp-bg.jpg") center / cover no-repeat;
+  }
+
+  .about-acsp-top {
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .about-acsp-logo {
+    width: 180px;
+  }
+
+  .about-acsp-top p {
+    font-size: 16px;
+  }
+
+  .about-acsp-hero h1 {
+    margin-bottom: 36px;
+    font-size: 36px;
+  }
+
+  .about-acsp-lines {
+    gap: 24px;
+  }
+
+  .about-acsp-line {
+    grid-template-columns: 56px 1fr;
+    gap: 14px 18px;
+  }
+
+  .about-acsp-line strong {
+    grid-row: 1 / 3;
+    font-size: 44px;
+  }
+
+  .about-acsp-line span {
+    font-size: 21px;
+  }
+
+  .about-acsp-line p {
+    font-size: 15px;
+  }
 }
 
 
@@ -5605,11 +5721,11 @@ body.modal-open {
 }
 
 .tab-blue {
-  background: linear-gradient(135deg, #173d56, #245777);
+  background: linear-gradient(135deg, #1f8a78, #2ba991);
 }
 
 .tab-green {
-  background: linear-gradient(135deg, #1f8a78, #2ba991);
+  background: linear-gradient(135deg, #173d56, #245777);
 }
 
 .tab-gold {
@@ -5675,11 +5791,11 @@ body.modal-open {
 }
 
 .filter-bg-blue {
-  background: linear-gradient(135deg, #173d56, #245777);
+  background: linear-gradient(135deg, #1f8a78, #2ba991);
 }
 
 .filter-bg-green {
-  background: linear-gradient(135deg, #1f8a78, #2ba991);
+  background: linear-gradient(135deg, #173d56, #245777);
 }
 
 .filter-bg-gold {
