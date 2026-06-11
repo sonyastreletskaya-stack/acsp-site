@@ -39,25 +39,47 @@ const catalogTitle = document.getElementById("catalogTitle");
 const catalogDescription = document.getElementById("catalogDescription");
 const catalogLink = document.getElementById("catalogLink");
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const tabName = tab.dataset.tab;
-    const item = catalogData[tabName];
+function changeCatalogTab(tab) {
+  const tabName = tab.dataset.tab;
+  const item = catalogData[tabName];
 
-    if (!item) return;
+  if (!item) return;
 
-    tabs.forEach((button) => {
-      button.classList.remove("active");
-    });
+  tabs.forEach((button) => {
+    button.classList.remove("active");
+  });
 
-    tab.classList.add("active");
+  tab.classList.add("active");
 
+  if (catalogImage) {
     catalogImage.src = item.image;
     catalogImage.alt = item.title;
+  }
 
+  if (catalogTitle) {
     catalogTitle.textContent = item.title;
+  }
+
+  if (catalogDescription) {
     catalogDescription.textContent = item.description;
+  }
+
+  if (catalogLink) {
     catalogLink.href = item.link;
+  }
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener("mouseenter", () => {
+    changeCatalogTab(tab);
+  });
+
+  tab.addEventListener("focus", () => {
+    changeCatalogTab(tab);
+  });
+
+  tab.addEventListener("click", () => {
+    changeCatalogTab(tab);
   });
 });
 
