@@ -12,7 +12,7 @@ const catalogData = {
     title: "Фильтры и сепараторы",
     description:
       "Воздушные, масляные, магистральные фильтры и сепараторы для винтовых компрессоров.",
-    link: "category.html?type=filters"
+    link: "filters-separators.html"
   },
 
   parts: {
