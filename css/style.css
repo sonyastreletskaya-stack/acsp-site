@@ -445,9 +445,9 @@ input {
   width: min(1400px, 100%);
   margin: 0 auto;
 
-  font-size: 20px;
-  line-height: 1.3;
-  font-weight: 1000;
+  font-size: 19px;
+  line-height: 1.6;
+  font-weight: 400;
 
   color: #ffffff;
 }
@@ -5484,230 +5484,310 @@ body.modal-open {
     cursor: pointer !important;
   }
 }
-/* СТРАНИЦА-ПЕРЕХОД: ФИЛЬТРЫ И СЕПАРАТОРЫ */
+/* СТРАНИЦА-ПЕРЕХОД: ФИЛЬТРЫ И СЕПАРАТОРЫ, ШАХМАТНЫЙ ВИД */
 
-.filter-section-page {
+.filter-transition-page {
   min-height: 100vh;
-  padding: 78px 24px 100px;
+  padding: 76px 24px 110px;
+
   background:
-    radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.18), transparent 34%),
-    linear-gradient(135deg, #2899e6 0%, #0d8fd8 46%, #0679bd 100%);
+    radial-gradient(circle at 15% 8%, rgba(255, 255, 255, 0.18), transparent 34%),
+    linear-gradient(135deg, #2899e6 0%, #1593dc 48%, #0879bd 100%);
+
   color: #ffffff;
 }
 
-.filter-section-head {
+.filter-transition-head {
   width: min(1180px, 100%);
-  margin: 0 auto 54px;
+  margin: 0 auto 42px;
   text-align: center;
 }
 
-.filter-section-head p {
+.filter-transition-head p {
   margin: 0 0 12px;
+
   font-size: 15px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.74);
+
+  color: rgba(255, 255, 255, 0.72);
 }
 
-.filter-section-head h1 {
+.filter-transition-head h1 {
   margin: 0 0 18px;
+
   font-size: 58px;
   line-height: 1.08;
   font-weight: 900;
+
   color: #ffffff;
 }
 
-.filter-section-head span {
+.filter-transition-head span {
   display: block;
   max-width: 720px;
   margin: 0 auto;
+
   font-size: 20px;
   line-height: 1.55;
+
   color: rgba(255, 255, 255, 0.82);
 }
 
-.filter-section-grid {
+
+/* ВЕРХНИЕ 4 ЦВЕТНЫЕ ПЛАШКИ */
+
+.filter-color-tabs {
   width: min(1180px, 100%);
-  margin: 0 auto;
+  margin: 0 auto 66px;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
-.filter-section-card {
+.filter-color-tab {
   position: relative;
+  min-height: 76px;
+  padding: 18px 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+
+  border-radius: 18px;
+
+  color: #ffffff;
   overflow: hidden;
 
-  display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 26px;
-
-  min-height: 330px;
-  padding: 24px;
-
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.14);
-  backdrop-filter: blur(10px);
-
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.filter-section-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+.filter-color-tab:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.24);
 }
 
-.filter-section-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.22;
-  pointer-events: none;
-}
-
-.filter-card-yellow::before {
-  background: linear-gradient(135deg, #fff200, transparent 62%);
-}
-
-.filter-card-blue::before {
-  background: linear-gradient(135deg, #173d56, transparent 62%);
-}
-
-.filter-card-green::before {
-  background: linear-gradient(135deg, #1f8a78, transparent 62%);
-}
-
-.filter-card-gold::before {
-  background: linear-gradient(135deg, #b79a51, transparent 62%);
-}
-
-.filter-section-image,
-.filter-section-content {
+.filter-color-tab span {
   position: relative;
   z-index: 1;
+
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 900;
 }
 
-.filter-section-image {
-  min-height: 260px;
-  border-radius: 24px;
+.filter-color-tab small {
+  position: relative;
+  z-index: 1;
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.filter-color-tab:hover small {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tab-yellow {
+  background: linear-gradient(135deg, #fff200, #f2c900);
+  color: #24313f;
+}
+
+.tab-blue {
+  background: linear-gradient(135deg, #173d56, #245777);
+}
+
+.tab-green {
+  background: linear-gradient(135deg, #1f8a78, #2ba991);
+}
+
+.tab-gold {
+  background: linear-gradient(135deg, #b79a51, #d1b468);
+}
+
+
+/* ШАХМАТНЫЕ БЛОКИ */
+
+.filter-transition-list {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.filter-row-reverse {
+  grid-template-columns: 1.22fr 0.78fr;
+}
+
+.filter-row-image,
+.filter-row-content {
+  min-height: 330px;
+  border-radius: 30px;
+}
+
+.filter-row-image {
+  padding: 34px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgba(255, 255, 255, 0.92);
   overflow: hidden;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.14);
 }
 
-.filter-card-yellow .filter-section-image {
-  background: linear-gradient(135deg, #fff200, #ffe45c);
+.filter-row-image img {
+  width: 88%;
+  height: 88%;
+
+  object-fit: contain;
+  display: block;
+
+  transition: transform 0.3s ease;
 }
 
-.filter-card-blue .filter-section-image {
+.filter-row-image:hover img {
+  transform: scale(1.04);
+}
+
+.filter-bg-yellow {
+  background: linear-gradient(135deg, #fff200, #ffd947);
+}
+
+.filter-bg-blue {
   background: linear-gradient(135deg, #173d56, #245777);
 }
 
-.filter-card-green .filter-section-image {
+.filter-bg-green {
   background: linear-gradient(135deg, #1f8a78, #2ba991);
 }
 
-.filter-card-gold .filter-section-image {
+.filter-bg-gold {
   background: linear-gradient(135deg, #b79a51, #d1b468);
 }
 
-.filter-section-image img {
-  width: 78%;
-  height: 78%;
-  object-fit: contain;
-  display: block;
-}
+.filter-row-content {
+  padding: 38px 42px;
 
-.filter-section-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.1);
 }
 
-.filter-section-content > span {
+.filter-row-content > span {
   display: inline-flex;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 
-  font-size: 15px;
-  font-weight: 900;
+  font-size: 14px;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 900;
+
   color: rgba(255, 255, 255, 0.62);
 }
 
-.filter-section-content h2 {
-  margin: 0 0 16px;
+.filter-row-content h2 {
+  margin: 0 0 18px;
 
-  font-size: 31px;
-  line-height: 1.12;
+  font-size: 42px;
+  line-height: 1.08;
   font-weight: 900;
+
   color: #ffffff;
 }
 
-.filter-section-content p {
+.filter-row-content p {
+  max-width: 720px;
   margin: 0 0 16px;
 
-  font-size: 16px;
-  line-height: 1.58;
+  font-size: 17px;
+  line-height: 1.6;
+
   color: rgba(255, 255, 255, 0.86);
 }
 
-.filter-section-content details {
+.filter-row-content details {
   width: 100%;
-  margin: 4px 0 20px;
+  margin: 6px 0 24px;
 }
 
-.filter-section-content summary {
+.filter-row-content summary {
   cursor: pointer;
 
   display: inline-flex;
   align-items: center;
   gap: 8px;
 
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 900;
+
   color: #ffffff;
 }
 
-.filter-section-details {
-  margin-top: 16px;
-  padding: 18px;
-
-  border-radius: 18px;
-  background: rgba(7, 13, 53, 0.18);
+.filter-row-content summary::marker {
+  color: #ffffff;
 }
 
-.filter-section-details h3 {
+.filter-details {
+  margin-top: 18px;
+  padding: 22px;
+
+  border-radius: 22px;
+  background: rgba(7, 13, 53, 0.2);
+}
+
+.filter-details h3 {
   margin: 18px 0 12px;
-  font-size: 19px;
+
+  font-size: 20px;
   color: #ffffff;
 }
 
-.filter-section-details ul {
+.filter-details ul {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
-.filter-section-details li {
-  margin-bottom: 12px;
+.filter-details li {
+  margin-bottom: 13px;
+
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.58;
+
   color: rgba(255, 255, 255, 0.86);
 }
 
-.filter-section-content a {
+.filter-row-content a {
   margin-top: auto;
 
-  min-width: 190px;
-  height: 48px;
-  padding: 0 22px;
+  min-width: 210px;
+  height: 50px;
+  padding: 0 24px;
 
   display: inline-flex;
   align-items: center;
@@ -5723,57 +5803,88 @@ body.modal-open {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.filter-section-content a:hover {
+.filter-row-content a:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
 }
 
-@media screen and (max-width: 1050px) {
-  .filter-section-grid {
-    grid-template-columns: 1fr;
+
+/* АДАПТИВ */
+
+@media screen and (max-width: 900px) {
+  .filter-transition-page {
+    padding: 54px 18px 82px;
   }
 
-  .filter-section-card {
-    grid-template-columns: 220px 1fr;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .filter-section-page {
-    padding: 54px 18px 78px;
-  }
-
-  .filter-section-head {
-    margin-bottom: 34px;
+  .filter-transition-head {
+    margin-bottom: 32px;
     text-align: left;
   }
 
-  .filter-section-head h1 {
+  .filter-transition-head h1 {
     font-size: 38px;
   }
 
-  .filter-section-head span {
+  .filter-transition-head span {
     font-size: 17px;
   }
 
-  .filter-section-card {
+  .filter-color-tabs {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .filter-color-tab {
+    min-height: 72px;
+    padding: 15px;
+  }
+
+  .filter-color-tab small {
+    opacity: 1;
+    transform: none;
+  }
+
+  .filter-row,
+  .filter-row-reverse {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
 
+  .filter-row-image,
+  .filter-row-content {
     min-height: 0;
-    padding: 18px;
     border-radius: 24px;
   }
 
-  .filter-section-image {
-    min-height: 220px;
+  .filter-row-image {
+    min-height: 250px;
+    padding: 28px;
   }
 
-  .filter-section-content h2 {
-    font-size: 27px;
+  .filter-row-content {
+    padding: 28px 24px;
   }
 
-  .filter-section-content a {
+  .filter-row-content h2 {
+    font-size: 31px;
+  }
+
+  .filter-row-content p {
+    font-size: 16px;
+  }
+
+  .filter-row-content a {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .filter-color-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-row-image {
+    min-height: 220px;
   }
 }
