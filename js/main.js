@@ -181,3 +181,33 @@ document.addEventListener("keydown", (event) => {
     closeFormPopup();
   }
 });
+(function () {
+  const burgerButton = document.querySelector(".mobile-menu-toggle");
+  const mobileNav = document.querySelector(".main-nav");
+  const mobileActions = document.querySelector(".header-actions");
+
+  if (!burgerButton || !mobileNav) return;
+
+  burgerButton.addEventListener("click", function () {
+    burgerButton.classList.toggle("is-open");
+    mobileNav.classList.toggle("is-open");
+
+    if (mobileActions) {
+      mobileActions.classList.toggle("is-open");
+    }
+  });
+})();
+
+(function () {
+  const catalogButton = document.querySelector(".catalog-link");
+  const catalogNavItem = catalogButton ? catalogButton.closest(".nav-item") : null;
+
+  if (!catalogButton || !catalogNavItem) return;
+
+  catalogButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    catalogNavItem.classList.toggle("is-open");
+  });
+})();

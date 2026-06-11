@@ -16,13 +16,19 @@
     <img src="images/logo2.png" alt="ACSP">
   </a>
 
+  <button class="mobile-menu-toggle" type="button" aria-label="Открыть меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
   <nav class="main-nav">
     <a href="about.html">О нас</a>
 
     <div class="nav-item">
-      <a href="catalog.html" class="catalog-link">
+      <button class="catalog-link" type="button">
         Каталог <span class="catalog-arrow">▼</span>
-      </a>
+      </button>
 
       <div class="dropdown catalog-dropdown">
         <a href="catalog.html" class="dropdown-main-link">Общий каталог</a>
@@ -43,14 +49,10 @@
         </div>
 
         <div class="dropdown-group">
-          <a href="category.html?type=parts" class="dropdown-title">Запчасти</a>
+          <a href="parts-valves.html" class="dropdown-title">Запчасти и клапаны</a>
           <a href="category.html?type=motors">Электродвигатели</a>
           <a href="category.html?type=inverters">Частотные преобразователи</a>
           <a href="category.html?type=drain-valves">Конденсатоотводчики</a>
-        </div>
-
-        <div class="dropdown-group">
-          <a href="category.html?type=valves" class="dropdown-title">Клапаны</a>
           <a href="category.html?type=solenoid-valves">Электромагнитные клапаны</a>
         </div>
 
@@ -83,7 +85,8 @@
       <img src="images/mail.png" alt="Mail">
     </a>
 
-    <button class="header-search" type="button">⌕</button>
+    <button class="header-search" type="button" aria-label="Открыть поиск">⌕</button>
+
     <a href="#" class="lang">RU</a>
   </div>
 
@@ -228,13 +231,14 @@
   </div>
 
   <div class="footer-bottom">
-    Дизайн и разработка сайта: GROOXO
-    <a href="https://sonyastreletskaya-stack.github.io/grooxo-site/" target="_blank" rel="noopener noreferrer"></a>
+    <a href="https://sonyastreletskaya-stack.github.io/grooxo-site/" target="_blank" rel="noopener noreferrer">
+        Дизайн и разработка сайта: GROOXO
+        </a>
   </div>
 </footer>
-
 
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
