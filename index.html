@@ -31,7 +31,7 @@
       </button>
 
       <div class="dropdown catalog-dropdown">
-        <a href="category.html?type=filters" class="dropdown-main-link">Общий каталог</a>
+         <a href="general-catalog.html" class="dropdown-main-link">Общий каталог</a>
 
         <div class="dropdown-group">
           <a href="category.html?type=dryers" class="dropdown-title">Осушители</a>
@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-
+<a href="purchase-process.html">Процесс покупки</a>
     <a href="news.html">Новости</a>
     <a href="resources.html">Технические ресурсы</a>
     <a href="dealers.html">Партнёрам</a>
@@ -93,29 +93,27 @@
 <main>
 
   <!-- ПЕРВЫЙ БЛОК -->
-<section class="hero">
+<!-- ПЕРВЫЙ БЛОК -->
+<section id="homeHero" class="hero">
   <div class="hero-overlay"></div>
 
-  <div class="hero-content">
+  <div id="homeHeroContent">
 
-    <img class="hero-logo" src="images/logo.png" alt="ACSP">
+    <div id="homeHeroTop">
+      <img id="homeHeroLogo" src="images/logo.png" alt="ACSP">
 
-    <div class="hero-main-text">
-      <p class="hero-brand">ACSP</p>
+      <div id="homeHeroText">
+        <h1>
+          Платформа по продаже запчастей для воздушных компрессоров
+        </h1>
 
-      <h1>
-        Платформа по продаже запчастей<br>
-        для воздушных компрессоров
-      </h1>
-
-      <div class="hero-tags">
-        <span>Прецизионная фильтрация</span>
-        <span>Долговечность</span>
-        <span>Полное обеспечение</span>
+        <div id="homeHeroTags">
+          <span>Прецизионная фильтрация ■ Долговечность ■ Полное обеспечение</span>
+        </div>
       </div>
     </div>
 
-    <form class="catalog-search" action="category.html">
+    <form id="homeHeroSearch" action="category.html">
       <input type="hidden" name="type" value="filters">
       <input type="text" name="q" placeholder="OE-номер или модель компрессора">
       <button type="submit">Подобрать</button>
@@ -164,44 +162,44 @@
   <h2>ACSP: единый источник всех расходных запчастей для компрессоров</h2>
 </section>
 
-  <!-- ТРЕТИЙ БЛОК: ПЕРЕКЛЮЧАЮЩИЙСЯ КАТАЛОГ -->
-  <section class="catalog-tabs-section">
-    <div class="catalog-tabs-wrapper">
+<!-- ТРЕТИЙ БЛОК ПЕРЕКЛЮЧАЮЩИЙСЯ КАТАЛОГ -->
+<section class="catalog-tabs-section">
+  <div class="catalog-tabs-wrapper">
 
-      <div class="catalog-tabs">
-        <button class="catalog-tab active" data-tab="dryers">
-          Осушители и очистка воздуха
-        </button>
+    <div class="catalog-tabs">
+      <button class="catalog-tab active" data-tab="filters">
+        Фильтры и сепараторы
+      </button>
 
-        <button class="catalog-tab" data-tab="filters">
-          Фильтры и сепараторы
-        </button>
+      <button class="catalog-tab" data-tab="dryers">
+        Осушители и очистка воздуха
+      </button>
 
-        <button class="catalog-tab" data-tab="parts">
-          Запчасти и клапаны
-        </button>
+      <button class="catalog-tab" data-tab="parts">
+        Запчасти и клапаны
+      </button>
 
-        <button class="catalog-tab" data-tab="oils">
-          Компрессорные масла
-        </button>
-      </div>
-
-      <div class="catalog-preview">
-        <img id="catalogImage" src="images/dryers.jpg" alt="Осушители и очистка воздуха">
-
-        <div class="catalog-preview-text">
-          <h2 id="catalogTitle">Осушители и очистка воздуха</h2>
-
-          <p id="catalogDescription">
-            Адсорбционные и рефрижераторные осушители, комплекты магистральных фильтров для подготовки сухого и чистого сжатого воздуха.
-          </p>
-
-          <a id="catalogLink" href="category.html?type=dryers">Перейти в каталог</a>
-        </div>
-        </div>
-
+      <button class="catalog-tab" data-tab="oils">
+        Компрессорные масла
+      </button>
     </div>
-  </section>
+
+    <div class="catalog-preview">
+      <img id="catalogImage" src="images/filters.jpg" alt="Фильтры и сепараторы">
+
+      <div class="catalog-preview-text">
+        <h2 id="catalogTitle">Фильтры и сепараторы</h2>
+
+        <p id="catalogDescription">
+          Воздушные, масляные, магистральные фильтры и сепараторы для винтовых компрессоров.
+        </p>
+
+        <a id="catalogLink" href="filters-separators.html">Перейти в каталог</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
   <!-- ЧЕТВЁРТЫЙ БЛОК: ТРИ КОЛОНКИ -->

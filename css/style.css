@@ -202,7 +202,7 @@ input {
   left: 50%;
   top: 100%;
 
-  width: min(820px, calc(100% - 48px));
+  width: min(1220px, calc(100% - 48px));
 
   display: flex;
   align-items: center;
@@ -380,58 +380,6 @@ input {
   color: #ffffff;
 }
 
-.catalog-search {
-  width: min(920px, 100%);
-  margin-top: 200px !important;
-  transform: translateX(20px) !important;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-}
-
-.catalog-search input {
-  flex: 1;
-  height: 48px;
-
-  padding: 0 20px;
-
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  background: rgba(255, 255, 255, 0.86);
-
-  color: #1f2933;
-  font-size: 14px;
-
-  outline: none;
-}
-
-.catalog-search input:focus {
-  border-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.22);
-}
-
-.catalog-search button {
-  min-width: 140px;
-  height: 48px;
-
-  border: none;
-  border-radius: 28px;
-
-  background: linear-gradient(135deg, #e8731c, #c95016);
-  color: #ffffff;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.catalog-search button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(201, 80, 22, 0.35);
-}
 
 /* НАДПИСЬ ПЕРЕД раскрывающими карточками */
 
@@ -6332,53 +6280,6 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* ПОИСК — НА ТОЙ ЖЕ ЛЕВОЙ ЛИНИИ */
-
-.hero .catalog-search {
-  width: min(760px, 100%) !important;
-  margin: 0 !important;
-
-  display: grid !important;
-  grid-template-columns: 1fr 170px !important;
-  gap: 14px !important;
-
-  transform: none !important;
-}
-
-.hero .catalog-search input {
-  width: 100% !important;
-  height: 54px !important;
-
-  padding: 0 22px !important;
-
-  border: none !important;
-  border-radius: 4px !important;
-
-  background: rgba(255, 255, 255, 0.92) !important;
-  color: #24313f !important;
-
-  font-size: 16px !important;
-  font-weight: 500 !important;
-
-  box-sizing: border-box !important;
-}
-
-.hero .catalog-search button {
-  height: 54px !important;
-
-  border: none !important;
-  border-radius: 27px !important;
-
-  background: linear-gradient(135deg, #f0642f, #c94424) !important;
-  color: #ffffff !important;
-
-  font-size: 16px !important;
-  font-weight: 900 !important;
-
-  cursor: pointer !important;
-}
-
-
 /* МОБИЛЬНАЯ ВЕРСИЯ */
 
 @media screen and (max-width: 900px) {
@@ -6425,27 +6326,6 @@ body.modal-open {
 
   .hero-tags span::after {
     display: none !important;
-  }
-
-  .hero .catalog-search {
-    width: 100% !important;
-    max-width: 360px !important;
-
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-
-  .hero .catalog-search input {
-    height: 44px !important;
-    border-radius: 22px !important;
-    font-size: 14px !important;
-  }
-
-  .hero .catalog-search button {
-    height: 48px !important;
-    border-radius: 24px !important;
-    font-size: 16px !important;
   }
 }
 /* ДВИГАЕМ ТОЛЬКО ЛОГОТИП + ТЕКСТ В HERO */
@@ -6643,4 +6523,2070 @@ body.modal-open {
   .city-card-main .city-card-content p {
     font-size: 16px;
   }
+}
+/* =========================================================
+   ACSP GLOBAL ALIGNMENT + TYPOGRAPHY SYSTEM
+   Добавлено для единой ширины блоков и трех уровней текста.
+   Центровку не ломает: где текст был по центру, там он остается по центру.
+   ========================================================= */
+
+:root {
+  --acsp-page-width: 1180px;
+  --acsp-page-side: 24px;
+
+  --acsp-title-size: clamp(38px, 4.4vw, 54px);
+  --acsp-subtitle-size: clamp(22px, 2.2vw, 28px);
+  --acsp-text-size: 16px;
+
+  --acsp-title-weight: 900;
+  --acsp-subtitle-weight: 800;
+  --acsp-text-weight: 500;
+
+  --acsp-title-line: 1.1;
+  --acsp-subtitle-line: 1.25;
+  --acsp-text-line: 1.6;
+}
+
+/* Единая полезная ширина для основных контейнеров страниц */
+.hero-content,
+.acsp-hover-slider,
+.catalog-intro,
+.catalog-tabs-wrapper,
+.benefits,
+.news-page-head,
+.news-layout,
+.category-head,
+.category-layout,
+.product-page,
+.privacy-page,
+.contacts-head,
+.contacts-map,
+.contacts-cities-inner,
+.contacts-engineers-inner,
+.contacts-form-section,
+.about-acsp-inner,
+.about-principles-inner,
+.about-trust-inner,
+.about-brands-inner,
+.about-team-inner,
+.about-office-inner,
+.dealers-hero-inner,
+.dealers-section-head,
+.dealers-conditions-grid,
+.dealers-why-inner,
+.dealers-brands-inner,
+.filter-transition-head,
+.filter-color-tabs,
+.filter-transition-list,
+.parts-hero-inner,
+.parts-section-inner,
+.footer-inner {
+  width: min(var(--acsp-page-width), 100%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Для секций без внутреннего контейнера оставляем одинаковый боковой воздух */
+.catalog-intro,
+.benefits,
+.product-page,
+.privacy-page,
+.contacts-form-section {
+  padding-left: var(--acsp-page-side) !important;
+  padding-right: var(--acsp-page-side) !important;
+}
+
+/* Единая типографика: заголовок / подзаголовок / основной текст */
+main h1 {
+  font-size: var(--acsp-title-size) !important;
+  line-height: var(--acsp-title-line) !important;
+  font-weight: var(--acsp-title-weight) !important;
+}
+
+main h2 {
+  font-size: clamp(34px, 3.8vw, 48px) !important;
+  line-height: var(--acsp-title-line) !important;
+  font-weight: var(--acsp-title-weight) !important;
+}
+
+main h3,
+main .section-subtitle,
+main .news-main-head h2,
+main .footer-column h3 {
+  font-size: var(--acsp-subtitle-size) !important;
+  line-height: var(--acsp-subtitle-line) !important;
+  font-weight: var(--acsp-subtitle-weight) !important;
+}
+
+main p,
+main li,
+main .news-feed-item strong,
+main .news-feed-item span,
+main .featured-news-card-content span {
+  font-size: var(--acsp-text-size) !important;
+  line-height: var(--acsp-text-line) !important;
+  font-weight: var(--acsp-text-weight) !important;
+}
+
+/* Короткие технические метки остаются компактнее, но в одной логике */
+main .hero-brand,
+main .category-head p,
+main .contacts-head p,
+main .news-page-head p,
+main .filter-transition-head p,
+main .about-acsp-top p,
+main .article-meta,
+main .article-meta span {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+  font-weight: 700 !important;
+}
+
+/* Hero не центрируем: сохраняем левую композицию и общую ширину */
+.hero-content {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+
+.hero-logo {
+  margin-left: 0 !important;
+}
+
+.hero-main-text h1 {
+  font-size: clamp(34px, 4vw, 46px) !important;
+  line-height: 1.16 !important;
+  text-align: left !important;
+}
+
+.hero-tags {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+/* Ленты новостей/ресурсов: без описаний в маленьких карточках */
+.news-feed-item p,
+.featured-news-card-content p {
+  display: none !important;
+}
+
+/* Главная карточка новостей/ресурсов: картинка вписывается в карточку, а не изображает обои */
+.featured-news-card {
+  overflow: hidden !important;
+  background-image: none !important;
+}
+
+.featured-news-card::before,
+.featured-news-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+.featured-news-image {
+  width: 100% !important;
+  height: 320px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+.featured-news-image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+}
+
+/* Города: первая карточка большая, четвертая маленькая тоже Новосибирск по HTML */
+.contacts-city-grid {
+  width: 100% !important;
+}
+
+/* Единая ширина модалок статей */
+.news-modal-content {
+  width: min(920px, calc(100% - 32px)) !important;
+}
+
+.news-modal-body p,
+.news-modal-body li {
+  font-size: var(--acsp-text-size) !important;
+  line-height: 1.72 !important;
+  font-weight: var(--acsp-text-weight) !important;
+}
+
+.news-modal-body h2 {
+  font-size: clamp(30px, 3.4vw, 44px) !important;
+}
+
+.news-modal-body h3 {
+  font-size: var(--acsp-subtitle-size) !important;
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --acsp-page-side: 18px;
+    --acsp-title-size: clamp(32px, 9vw, 38px);
+    --acsp-subtitle-size: 22px;
+    --acsp-text-size: 15px;
+  }
+
+  .hero-content,
+  .acsp-hover-slider,
+  .catalog-intro,
+  .catalog-tabs-wrapper,
+  .benefits,
+  .news-page-head,
+  .news-layout,
+  .category-head,
+  .category-layout,
+  .product-page,
+  .privacy-page,
+  .contacts-head,
+  .contacts-map,
+  .contacts-cities-inner,
+  .contacts-engineers-inner,
+  .contacts-form-section,
+  .about-acsp-inner,
+  .about-principles-inner,
+  .about-trust-inner,
+  .about-brands-inner,
+  .about-team-inner,
+  .about-office-inner,
+  .dealers-hero-inner,
+  .dealers-section-head,
+  .dealers-conditions-grid,
+  .dealers-why-inner,
+  .dealers-brands-inner,
+  .filter-transition-head,
+  .filter-color-tabs,
+  .filter-transition-list,
+  .footer-inner {
+    width: min(100%, calc(100vw - 36px)) !important;
+  }
+
+  .featured-news-image {
+    height: 240px !important;
+  }
+}
+/* ГЛАВНАЯ — ВЫРАВНИВАЕМ БЛОК BENEFITS ПО ОБЩЕЙ ШИРИНЕ */
+
+.benefits {
+  width: min(1320px, 100%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  padding: 90px 24px 110px !important;
+  box-sizing: border-box !important;
+}
+
+.benefits h2 {
+  width: 100% !important;
+  margin: 0 0 58px !important;
+
+  text-align: center !important;
+
+  font-size: 52px !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+
+  color: #ffffff !important;
+}
+
+.benefits-grid {
+  width: 100% !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 64px !important;
+
+  align-items: start !important;
+}
+
+/* карточки внутри своих колонок */
+
+.benefit-card {
+  width: 100% !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 1 карточка — к левому краю общей сетки */
+
+.benefit-card:nth-child(1) {
+  align-items: flex-start !important;
+  text-align: center !important;
+}
+
+.benefit-card:nth-child(1) .benefit-icon,
+.benefit-card:nth-child(1) .benefit-number,
+.benefit-card:nth-child(1) p {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* 2 карточка — по центру */
+
+.benefit-card:nth-child(2) {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.benefit-card:nth-child(2) .benefit-icon,
+.benefit-card:nth-child(2) .benefit-number,
+.benefit-card:nth-child(2) p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 3 карточка — к правому краю общей сетки */
+
+.benefit-card:nth-child(3) {
+  align-items: flex-end !important;
+  text-align: center !important;
+}
+
+.benefit-card:nth-child(3) .benefit-icon,
+.benefit-card:nth-child(3) .benefit-number,
+.benefit-card:nth-child(3) p {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* картинки */
+
+.benefit-icon {
+  width: 100% !important;
+  max-width: 360px !important;
+  height: 230px !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+
+  display: block !important;
+  margin-bottom: 24px !important;
+}
+
+/* цифры и текст */
+
+.benefit-number {
+  width: 360px !important;
+  max-width: 100% !important;
+
+  margin-bottom: 14px !important;
+
+  font-size: 34px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+
+  color: #ffffff !important;
+}
+
+.benefit-card p {
+  width: 360px !important;
+  max-width: 100% !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+  font-size: 17px !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media screen and (max-width: 900px) {
+  .benefits {
+    width: 100% !important;
+    padding: 64px 18px !important;
+  }
+
+  .benefits h2 {
+    margin-bottom: 36px !important;
+    font-size: 32px !important;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .benefit-card,
+  .benefit-card:nth-child(1),
+  .benefit-card:nth-child(2),
+  .benefit-card:nth-child(3) {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .benefit-card:nth-child(1) .benefit-icon,
+  .benefit-card:nth-child(1) .benefit-number,
+  .benefit-card:nth-child(1) p,
+  .benefit-card:nth-child(2) .benefit-icon,
+  .benefit-card:nth-child(2) .benefit-number,
+  .benefit-card:nth-child(2) p,
+  .benefit-card:nth-child(3) .benefit-icon,
+  .benefit-card:nth-child(3) .benefit-number,
+  .benefit-card:nth-child(3) p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .benefit-icon,
+  .benefit-number,
+  .benefit-card p {
+    width: 340px !important;
+    max-width: 100% !important;
+  }
+
+  .benefit-icon {
+    height: 210px !important;
+  }
+}
+/* =========================================================
+   ГЛАВНАЯ — ЛИНИИ МЕЖДУ ТРЕМЯ КАРТОЧКАМИ BENEFITS
+   ========================================================= */
+
+.benefits-grid {
+  position: relative !important;
+}
+
+.benefit-card {
+  position: relative !important;
+}
+
+/* убираем старые линии, если они были */
+.benefit-card::before,
+.benefit-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* линия после 1 карточки */
+.benefit-card:nth-child(1)::after {
+  content: "" !important;
+  display: block !important;
+
+  position: absolute !important;
+  right: -32px !important;
+  top: 260px !important;
+
+  width: 2px !important;
+  height: 150px !important;
+
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* линия после 2 карточки */
+.benefit-card:nth-child(2)::after {
+  content: "" !important;
+  display: block !important;
+
+  position: absolute !important;
+  right: -32px !important;
+  top: 260px !important;
+
+  width: 2px !important;
+  height: 150px !important;
+
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* если нужно ещё ниже — меняй top */
+.benefit-card:nth-child(1)::after,
+.benefit-card:nth-child(2)::after {
+  top: 270px !important;
+}
+
+/* мобильная версия — линии убираем */
+@media screen and (max-width: 900px) {
+  .benefit-card:nth-child(1)::after,
+  .benefit-card:nth-child(2)::after {
+    display: none !important;
+  }
+}
+/* =========================================================
+   HERO — ИСПРАВЛЕНИЕ ПЕРВОГО ЭКРАНА
+   ========================================================= */
+
+.hero {
+  position: relative !important;
+  min-height: calc(100vh - 78px) !important;
+
+  padding: 86px 24px 86px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 151, 221, 0.42) 0%,
+      rgba(8, 151, 221, 0.58) 48%,
+      rgba(8, 151, 221, 0.82) 100%
+    ),
+    url("../images/hero-bg.jpg") center / cover no-repeat !important;
+}
+
+.hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+
+  background: rgba(8, 151, 221, 0.12) !important;
+
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+
+  width: min(1180px, 100%) !important;
+  margin: 0 auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  text-align: left !important;
+  color: #ffffff !important;
+}
+
+/* группа логотип + текст, двигаем вверх отдельно от поиска */
+.hero-top-group {
+  width: min(760px, 100%) !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  transform: translateY(-48px) !important;
+}
+
+/* логотип */
+.hero-logo {
+  width: 330px !important;
+  height: auto !important;
+
+  margin: 0 0 28px 0 !important;
+
+  display: block !important;
+}
+
+/* старую надпись ACSP убираем, если где-то осталась */
+.hero-brand {
+  display: none !important;
+}
+
+/* текстовый блок */
+.hero-main-text {
+  width: 100% !important;
+  margin: 0 !important;
+
+  text-align: left !important;
+}
+
+.hero-main-text h1 {
+  margin: 0 0 18px 0 !important;
+
+  max-width: 760px !important;
+
+  font-size: 25px !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+
+  color: #ffffff !important;
+  text-align: left !important;
+
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* три слова — крупнее основного заголовка */
+.hero-tags {
+  margin: 0 !important;
+
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+
+  gap: 12px 26px !important;
+
+  text-align: left !important;
+}
+
+.hero-tags span {
+  position: relative !important;
+
+  font-size: 34px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+.hero-tags span:not(:last-child)::after {
+  content: "·" !important;
+
+  position: absolute !important;
+  right: -17px !important;
+  top: 0 !important;
+
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
+/* =========================================================
+   ШАПКА — МЕНЮ БОЛЕЕ РАСТЯНУТОЕ
+   ========================================================= */
+
+.site-header {
+  padding-left: 52px !important;
+  padding-right: 52px !important;
+}
+
+.main-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 34px !important;
+
+  flex: 1 1 auto !important;
+}
+
+.main-nav a,
+.catalog-link {
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+
+  white-space: nowrap !important;
+}
+
+.header-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 28px !important;
+}
+
+
+/* =========================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+  .hero {
+    min-height: calc(100vh - 74px) !important;
+    padding: 78px 18px 70px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .hero-top-group {
+    width: 100% !important;
+    transform: translateY(-22px) !important;
+  }
+
+  .hero-logo {
+    width: 220px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .hero-main-text h1 {
+    font-size: 22px !important;
+    line-height: 1.32 !important;
+    font-weight: 500 !important;
+  }
+
+  .hero-tags {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 7px !important;
+  }
+
+  .hero-tags span {
+    font-size: 18px !important;
+  }
+
+  .hero-tags span::after {
+    display: none !important;
+  }
+
+  .site-header {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .main-nav {
+    gap: 0 !important;
+  }
+}
+
+/* ТОЧНЫЙ ФИКС ПОИСКА НА ГЛАВНОМ ЭКРАНЕ */
+
+.hero #heroSearch {
+  width: 1200px !important;
+  max-width: 100% !important;
+
+  margin: -35px 0 0 0 !important;
+
+  display: grid !important;
+  grid-template-columns: 1fr 210px !important;
+  gap: 18px !important;
+
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+.hero #heroSearch input[type="text"] {
+  width: 100% !important;
+  height: 60px !important;
+
+  padding: 0 26px !important;
+
+  border: none !important;
+  border-radius: 6px !important;
+
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #24313f !important;
+
+  font-size: 16px !important;
+  font-weight: 500 !important;
+
+  box-sizing: border-box !important;
+}
+
+.hero #heroSearch button {
+  width: 210px !important;
+  height: 60px !important;
+
+  border: none !important;
+  border-radius: 30px !important;
+
+  background: linear-gradient(135deg, #f0642f, #c94424) !important;
+  color: #ffffff !important;
+
+  font-size: 16px !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+
+  box-sizing: border-box !important;
+}
+
+@media screen and (max-width: 900px) {
+  .hero #heroSearch {
+    width: 100% !important;
+    max-width: 380px !important;
+
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+
+    margin-top: 0 !important;
+  }
+
+  .hero #heroSearch input[type="text"] {
+    height: 46px !important;
+    border-radius: 23px !important;
+    font-size: 14px !important;
+  }
+
+  .hero #heroSearch button {
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 24px !important;
+  }
+}
+
+/* ФИНАЛЬНЫЙ ФИКС ПОИСКА НА ГЛАВНОМ ЭКРАНЕ */
+
+.hero #heroSearch {
+  width: min(1280px, 100%) !important;
+  max-width: 1180px !important;
+
+  margin: -28px 0 0 0 !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 210px !important;
+  gap: 18px !important;
+
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+.hero #heroSearch input[type="text"] {
+  width: 100% !important;
+  height: 60px !important;
+
+  padding: 0 26px !important;
+
+  border: none !important;
+  border-radius: 6px !important;
+
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #24313f !important;
+
+  font-size: 16px !important;
+  font-weight: 500 !important;
+
+  box-sizing: border-box !important;
+}
+
+.hero #heroSearch button {
+  width: 210px !important;
+  height: 60px !important;
+
+  border: none !important;
+  border-radius: 30px !important;
+
+  background: linear-gradient(135deg, #f0642f, #c94424) !important;
+  color: #ffffff !important;
+
+  font-size: 16px !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+@media screen and (max-width: 900px) {
+  .hero #heroSearch {
+    width: 100% !important;
+    max-width: 380px !important;
+
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+
+    margin-top: 0 !important;
+  }
+
+  .hero #heroSearch input[type="text"] {
+    height: 46px !important;
+    border-radius: 23px !important;
+    font-size: 14px !important;
+  }
+
+  .hero #heroSearch button {
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 24px !important;
+  }
+}
+
+/* =========================================================
+   ФИНАЛЬНЫЙ HERO БЕЗ КОНФЛИКТОВ СО СТАРЫМ CSS
+   ========================================================= */
+
+/* =========================================================
+   ФИНАЛЬНЫЙ HERO — ВЫРАВНИВАНИЕ ПОИСКА И ТЕКСТА
+   ========================================================= */
+
+#homeHero {
+  position: relative !important;
+  min-height: calc(100vh - 78px) !important;
+
+  padding: 70px 0 90px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 151, 221, 0.42) 0%,
+      rgba(8, 151, 221, 0.58) 48%,
+      rgba(8, 151, 221, 0.82) 100%
+    ),
+    url("../images/hero-bg.jpg") center / cover no-repeat !important;
+}
+
+#homeHero .hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+
+  background: rgba(8, 151, 221, 0.12) !important;
+  pointer-events: none !important;
+}
+
+/* общий контейнер hero = ширина следующего блока */
+#homeHeroContent {
+  position: relative !important;
+  z-index: 2 !important;
+
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+
+  color: #ffffff !important;
+  box-sizing: border-box !important;
+}
+
+/* логотип + текст: сильно вправо и вверх */
+#homeHeroTop {
+  width: min(820px, 100%) !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  margin: 0 0 34px 0 !important;
+
+  transform: translate(120px, -85px) !important;
+}
+
+#homeHeroLogo {
+  width: 330px !important;
+  height: auto !important;
+
+  display: block !important;
+  margin: 0 0 24px 0 !important;
+}
+
+#homeHeroText {
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+#homeHeroText h1 {
+  max-width: 760px !important;
+  margin: 0 0 18px 0 !important;
+
+  font-size: 25px !important;
+  line-height: 1.28 !important;
+  font-weight: 500 !important;
+
+  color: #ffffff !important;
+  text-align: left !important;
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* три слова */
+#homeHeroTags {
+  margin: 0 !important;
+
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  gap: 12px 28px !important;
+
+  text-align: left !important;
+}
+
+#homeHeroTags span {
+  position: relative !important;
+
+  font-size: 34px !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+#homeHeroTags span:not(:last-child)::after {
+  content: "·" !important;
+
+  position: absolute !important;
+  right: -18px !important;
+  top: 0 !important;
+
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* поиск: ровно от левого края контейнера до правого края контейнера */
+#homeHeroSearch {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: -45px 0 0 0 !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 220px !important;
+  gap: 18px !important;
+
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+#homeHeroSearch input[type="text"] {
+  width: 100% !important;
+  height: 62px !important;
+
+  padding: 0 28px !important;
+
+  border: none !important;
+  border-radius: 6px !important;
+
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #24313f !important;
+
+  font-size: 16px !important;
+  line-height: 62px !important;
+  font-weight: 500 !important;
+
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+#homeHeroSearch button {
+  width: 220px !important;
+  height: 62px !important;
+
+  border: none !important;
+  border-radius: 31px !important;
+
+  background: linear-gradient(135deg, #f0642f, #c94424) !important;
+  color: #ffffff !important;
+
+  font-size: 16px !important;
+  line-height: 62px !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+/* убираем влияние старого catalog-search внутри hero */
+#homeHero .catalog-search {
+  all: unset !important;
+}
+
+#homeHeroSearch {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: -45px 0 0 0 !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 220px !important;
+  gap: 18px !important;
+
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+#homeHeroSearch input[type="hidden"] {
+  display: none !important;
+}
+
+#homeHeroSearch input[type="text"] {
+  width: 100% !important;
+  height: 62px !important;
+
+  padding: 0 28px !important;
+
+  border: none !important;
+  border-radius: 6px !important;
+
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #24313f !important;
+
+  font-size: 16px !important;
+  line-height: 62px !important;
+  font-weight: 500 !important;
+
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+#homeHeroSearch button {
+  width: 220px !important;
+  height: 62px !important;
+
+  border: none !important;
+  border-radius: 31px !important;
+
+  background: linear-gradient(135deg, #f0642f, #c94424) !important;
+  color: #ffffff !important;
+
+  font-size: 16px !important;
+  line-height: 62px !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+/* мобильная версия */
+@media screen and (max-width: 900px) {
+  #homeHero {
+    min-height: calc(100vh - 74px) !important;
+    padding: 72px 18px 70px !important;
+  }
+
+  #homeHeroContent {
+    width: 100% !important;
+  }
+
+  #homeHeroTop {
+    width: 100% !important;
+    transform: translate(0, -22px) !important;
+  }
+
+  #homeHeroLogo {
+    width: 220px !important;
+    margin-bottom: 20px !important;
+  }
+
+  #homeHeroText h1 {
+    font-size: 22px !important;
+    line-height: 1.32 !important;
+  }
+
+  #homeHeroTags {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 7px !important;
+  }
+
+  #homeHeroTags span {
+    font-size: 18px !important;
+  }
+
+  #homeHeroTags span::after {
+    display: none !important;
+  }
+
+  #homeHeroSearch {
+    width: 100% !important;
+    max-width: 380px !important;
+
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+
+    margin-top: 0 !important;
+  }
+
+  #homeHeroSearch input[type="text"] {
+    height: 46px !important;
+    border-radius: 23px !important;
+    line-height: 46px !important;
+    font-size: 14px !important;
+  }
+
+  #homeHeroSearch button {
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 24px !important;
+    line-height: 48px !important;
+  }
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media screen and (max-width: 900px) {
+  #homeHero {
+    min-height: calc(100vh - 74px) !important;
+    padding: 72px 18px 70px !important;
+  }
+
+  #homeHeroContent {
+    width: 100% !important;
+  }
+
+  #homeHeroTop {
+    width: 100% !important;
+    transform: translateY(-22px) !important;
+  }
+
+  #homeHeroLogo {
+    width: 220px !important;
+    margin-bottom: 20px !important;
+  }
+
+  #homeHeroText h1 {
+    font-size: 22px !important;
+    line-height: 1.32 !important;
+  }
+
+  #homeHeroTags {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 7px !important;
+  }
+
+  #homeHeroTags span {
+    font-size: 18px !important;
+  }
+
+  #homeHeroTags span::after {
+    display: none !important;
+  }
+
+  #homeHeroSearch {
+    width: 100% !important;
+    max-width: 380px !important;
+
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+
+    margin-top: 0 !important;
+  }
+
+  #homeHeroSearch input[type="text"] {
+    height: 46px !important;
+    border-radius: 23px !important;
+    line-height: 46px !important;
+    font-size: 14px !important;
+  }
+
+  #homeHeroSearch button {
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 24px !important;
+    line-height: 48px !important;
+  }
+}
+
+/* =========================================================
+   СТРАНИЦА: ПРОЦЕСС ПОКУПКИ
+   ========================================================= */
+
+.purchase-page {
+  background: #2899e6;
+  color: #ffffff;
+}
+
+.purchase-hero {
+  padding: 90px 24px 70px;
+
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.16), transparent 32%),
+    linear-gradient(135deg, #2899e6 0%, #1593dc 48%, #0879bd 100%);
+}
+
+.purchase-hero-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.purchase-hero-inner p {
+  margin: 0 0 12px;
+
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.purchase-hero-inner h1 {
+  margin: 0 0 20px;
+
+  font-size: 58px;
+  line-height: 1.08;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.purchase-hero-inner span {
+  display: block;
+  max-width: 780px;
+  margin: 0 auto;
+
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.86);
+}
+
+
+.purchase-modules {
+  padding: 30px 24px 110px;
+  background: #2899e6;
+}
+
+.purchase-modules-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.purchase-module {
+  position: relative;
+
+  padding: 48px 52px;
+
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.purchase-module-dark {
+  background: rgba(7, 13, 53, 0.2);
+}
+
+.purchase-module-number {
+  display: inline-flex;
+  margin-bottom: 18px;
+
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 900;
+
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.purchase-module h2 {
+  max-width: 820px;
+  margin: 0 0 24px;
+
+  font-size: 42px;
+  line-height: 1.14;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.purchase-module p {
+  max-width: 900px;
+  margin: 0 0 18px;
+
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.86);
+}
+
+
+.purchase-points {
+  margin-top: 34px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.purchase-points div {
+  padding: 24px;
+
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.purchase-points strong {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.purchase-points p {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+.purchase-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.purchase-step {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.purchase-step b {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2899e6;
+
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.purchase-step h3 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.purchase-step p {
+  max-width: 850px;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.58;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.purchase-contact-link {
+  margin-top: 18px;
+
+  min-width: 230px;
+  height: 52px;
+  padding: 0 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f0642f, #c94424);
+  color: #ffffff;
+
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 900;
+
+  text-decoration: none;
+}
+
+.purchase-contact-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(201, 80, 22, 0.28);
+}
+
+
+@media screen and (max-width: 900px) {
+  .purchase-hero {
+    padding: 62px 18px 46px;
+  }
+
+  .purchase-hero-inner {
+    text-align: left;
+  }
+
+  .purchase-hero-inner h1 {
+    font-size: 38px;
+  }
+
+  .purchase-hero-inner span {
+    font-size: 17px;
+  }
+
+  .purchase-modules {
+    padding: 24px 18px 80px;
+  }
+
+  .purchase-module {
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+
+  .purchase-module h2 {
+    font-size: 30px;
+  }
+
+  .purchase-points {
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-step {
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+  }
+
+  .purchase-step b {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .purchase-step h3 {
+    font-size: 21px;
+  }
+
+  .purchase-contact-link {
+    width: 100%;
+  }
+}
+
+/* ОПУСТИТЬ ТОЛЬКО ПОИСКОВУЮ СТРОКУ В HERO */
+
+#homeHeroSearch {
+  margin: 40px 0 0 0 !important;
+}
+
+/* ШАПКА — ВЫПАДАЮЩИЙ КАТАЛОГ: ЦВЕТ И ЖИРНОСТЬ */
+
+.catalog-dropdown {
+  background: #ffffff !important;
+  color: #0b2f5f !important;
+}
+
+/* все ссылки внутри выпадающего меню */
+.catalog-dropdown a,
+.dropdown a {
+  color: #0b2f5f !important;
+
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+  font-weight: 500 !important;
+
+  text-decoration: none !important;
+}
+
+/* общий каталог сверху */
+.catalog-dropdown .dropdown-main-link,
+.dropdown .dropdown-main-link {
+  color: #1c8fe3 !important;
+
+  font-size: 16px !important;
+  font-weight: 800 !important;
+
+  background: rgba(40, 153, 230, 0.08) !important;
+}
+
+/* главные разделы: Осушители, Фильтры и сепараторы, Запчасти и клапаны, Компрессорные масла */
+.catalog-dropdown .dropdown-title,
+.dropdown .dropdown-title {
+  color: #0b2f5f !important;
+
+  font-size: 17px !important;
+  line-height: 1.3 !important;
+  font-weight: 900 !important;
+}
+
+/* подпункты внутри групп — обычный шрифт */
+.catalog-dropdown .dropdown-group a:not(.dropdown-title),
+.dropdown .dropdown-group a:not(.dropdown-title) {
+  color: #0b2f5f !important;
+
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+  font-weight: 500 !important;
+}
+
+/* наведение */
+.catalog-dropdown a:hover,
+.dropdown a:hover {
+  color: #1c8fe3 !important;
+  background: rgba(40, 153, 230, 0.08) !important;
+}
+
+/* разделительные линии */
+.catalog-dropdown .dropdown-group,
+.dropdown .dropdown-group {
+  border-top: 1px solid rgba(11, 47, 95, 0.14) !important;
+}
+/* КАТАЛОГ — ФИКС ЗАГОЛОВКА "ФИЛЬТРЫ" В ЛЕВОМ БЛОКЕ */
+
+.catalog-filters h2 {
+  margin: 0 0 22px !important;
+
+  font-size: 34px !important;
+  line-height: 1.08 !important;
+  font-weight: 900 !important;
+
+  color: #24313f !important;
+
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+/* =========================================================
+   СТРАНИЦА: ОБЩИЙ КАТАЛОГ
+   ========================================================= */
+
+.general-catalog-page {
+  min-height: 100vh;
+  padding: 76px 24px 110px;
+
+  background:
+    radial-gradient(circle at 15% 8%, rgba(255, 255, 255, 0.18), transparent 34%),
+    linear-gradient(135deg, #2899e6 0%, #1593dc 48%, #0879bd 100%);
+
+  color: #ffffff;
+}
+
+
+/* ШАПКА СТРАНИЦЫ */
+
+.general-catalog-head {
+  width: min(1180px, 100%);
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.general-catalog-head img {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+
+  display: block;
+  margin: 0 auto 26px;
+}
+
+.general-catalog-head p {
+  margin: 0 0 12px;
+
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 900;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.general-catalog-head h1 {
+  margin: 0 0 18px;
+
+  font-size: 58px;
+  line-height: 1.08;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.general-catalog-head span {
+  display: block;
+  max-width: 760px;
+  margin: 0 auto;
+
+  font-size: 20px;
+  line-height: 1.55;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   ВЕРХНИЕ 4 ПЛАШКИ-КАРТОЧКИ
+   ========================================================= */
+
+.general-catalog-panels {
+  width: min(1180px, 100%);
+  margin: 0 auto 76px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.general-catalog-panel {
+  position: relative;
+
+  min-height: 500px;
+  padding: 30px 28px 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 30px;
+  overflow: hidden;
+
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.16);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.general-catalog-panel:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 68px rgba(0, 0, 0, 0.24);
+}
+
+.general-catalog-panel-image {
+  width: 100%;
+  height: 190px;
+
+  margin-bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+  background: none;
+  overflow: hidden;
+}
+
+.general-catalog-panel-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.general-catalog-panel h2 {
+  margin: 0;
+
+  font-size: 26px;
+  line-height: 1.32;
+  font-weight: 700;
+
+  color: none;
+}
+
+.panel-yellow h2,
+.panel-green h2 {
+  color: #1c8fe3;
+}
+
+.general-catalog-panel a {
+  width: 150px;
+  height: 30px;
+
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background: #f4f1e8;
+  color: #111827;
+
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.general-catalog-panel a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ЦВЕТА ПЛАШЕК */
+
+.panel-yellow {
+  background: linear-gradient(180deg, #fff200 0%, #f2d900 100%);
+}
+
+.panel-green {
+  background: linear-gradient(180deg, #1f8a78 0%, #1b7d6d 100%);
+}
+
+.panel-gold {
+  background: linear-gradient(180deg, #b79a51 0%, #a98c46 100%);
+}
+
+.panel-blue {
+  background: linear-gradient(180deg, #173d56 0%, #12344b 100%);
+}
+
+
+/* =========================================================
+   НИЖНИЕ ШАХМАТНЫЕ БЛОКИ
+   ========================================================= */
+
+.general-catalog-list {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.general-catalog-row {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.general-catalog-row-reverse {
+  grid-template-columns: 1.22fr 0.78fr;
+}
+
+.general-catalog-row-image,
+.general-catalog-row-content {
+  min-height: 330px;
+  border-radius: 30px;
+}
+
+.general-catalog-row-image {
+  padding: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.14);
+}
+
+.general-catalog-row-image img {
+  width: 88%;
+  height: 88%;
+
+  object-fit: contain;
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.general-catalog-row-image:hover img {
+  transform: scale(1.04);
+}
+
+.general-catalog-row-content {
+  padding: 38px 42px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.1);
+}
+
+.general-catalog-row-content span {
+  display: inline-flex;
+  margin-bottom: 16px;
+
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 900;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.general-catalog-row-content h2 {
+  margin: 0 0 18px;
+
+  font-size: 42px;
+  line-height: 1.08;
+  font-weight: 900;
+
+  color: none;
+}
+
+.general-catalog-row-content p {
+  max-width: 720px;
+  margin: 0 0 24px;
+
+  font-size: 17px;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.general-catalog-row-content a {
+  margin-top: auto;
+
+  min-width: 210px;
+  height: 50px;
+  padding: 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+  background: #ffffff;
+  color: #147fc0;
+
+  font-size: 15px;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.general-catalog-row-content a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   АДАПТИВ
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+  .general-catalog-panels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .general-catalog-panel {
+    min-height: 440px;
+  }
+
+  .general-catalog-row,
+  .general-catalog-row-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .general-catalog-row-reverse .general-catalog-row-image {
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .general-catalog-page {
+    padding: 54px 18px 82px;
+  }
+
+  .general-catalog-head {
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  .general-catalog-head img {
+    width: 210px;
+    margin-left: 0;
+  }
+
+  .general-catalog-head h1 {
+    font-size: 38px;
+  }
+
+  .general-catalog-head span {
+    font-size: 17px;
+  }
+
+  .general-catalog-panels {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 54px;
+  }
+
+  .general-catalog-panel {
+    min-height: 400px;
+    border-radius: 26px;
+  }
+
+  .general-catalog-panel-image {
+    height: 180px;
+    border-radius: 20px;
+  }
+
+  .general-catalog-row-image,
+  .general-catalog-row-content {
+    min-height: 0;
+    border-radius: 24px;
+  }
+
+  .general-catalog-row-image {
+    min-height: 250px;
+    padding: 28px;
+  }
+
+  .general-catalog-row-content {
+    padding: 28px 24px;
+  }
+
+  .general-catalog-row-content h2 {
+    font-size: 31px;
+  }
+
+  .general-catalog-row-content p {
+    font-size: 16px;
+  }
+
+  .general-catalog-row-content a {
+    width: 100%;
+  }
+}
+
+/* ФОНЫ ДЛЯ БЛОКОВ С ФОТО ПО КАТЕГОРИЯМ */
+
+.general-catalog-row-image.gc-bg-yellow {
+  background: linear-gradient(135deg, #fff200, #ffd947);
+}
+
+.general-catalog-row-image.gc-bg-green {
+  background: linear-gradient(135deg, #1f8a78, #2ba991);
+}
+
+.general-catalog-row-image.gc-bg-gold {
+  background: linear-gradient(135deg, #b79a51, #d1b468);
+}
+
+.general-catalog-row-image.gc-bg-blue {
+  background: linear-gradient(135deg, #173d56, #245777);
+}
+
+/* ОБЩИЙ КАТАЛОГ — ОДИНАКОВЫЙ ЦВЕТ ЗАГОЛОВКОВ В ВЕРХНИХ ПЛАШКАХ */
+
+.general-catalog-panel h2,
+.general-catalog-panel.panel-yellow h2,
+.general-catalog-panel.panel-green h2,
+.general-catalog-panel.panel-gold h2,
+.general-catalog-panel.panel-blue h2 {
+  color: #ffffff !important;
+
+  font-size: 26px !important;
+  line-height: 1.25 !important;
+  font-weight: 900 !important;
 }
