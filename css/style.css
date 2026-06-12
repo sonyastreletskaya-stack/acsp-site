@@ -6710,7 +6710,7 @@ main .article-meta span {
 
 /* Единая ширина модалок статей */
 .news-modal-content {
-  width: min(920px, calc(100% - 32px)) !important;
+  width: min(1900px, calc(100% - 32px)) !important;
 }
 
 .news-modal-body p,
@@ -8589,4 +8589,268 @@ main .article-meta span {
   font-size: 26px !important;
   line-height: 1.25 !important;
   font-weight: 900 !important;
+}
+/* =========================================================
+   ОФОРМЛЕНИЕ СТАТЬИ ВНУТРИ МОДАЛЬНОГО ОКНА
+   ========================================================= */
+
+.news-modal,
+.resource-modal,
+.article-modal {
+  background: rgba(7, 31, 68, 0.92) !important;
+}
+
+/* белый лист статьи */
+.news-modal-content,
+.resource-modal-content,
+.article-modal-content {
+  max-width: 1300px !important;
+  width: calc(100% - 48px) !important;
+  max-height: calc(100vh - 48px) !important;
+
+  margin: 24px auto !important;
+  padding: 0 !important;
+
+  background: #ffffff !important;
+  color: #111827 !important;
+
+  border-radius: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* сама статья как лист документа */
+.article-paper {
+  width: 100% !important;
+  max-width: 860px !important;
+
+  margin: 0 auto !important;
+  padding: 72px 72px 86px !important;
+
+  background: #ffffff !important;
+  color: #111827 !important;
+
+  box-sizing: border-box !important;
+}
+
+/* заголовок */
+.article-paper h1 {
+  margin: 0 0 24px !important;
+
+  font-size: 34px !important;
+  line-height: 1.22 !important;
+  font-weight: 900 !important;
+
+  color: #111827 !important;
+  text-align: left !important;
+}
+
+/* строка: источник + дата */
+.article-meta {
+  margin: 0 0 46px !important;
+
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 18px !important;
+  align-items: center !important;
+
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  font-weight: 600 !important;
+
+  color: #374151 !important;
+}
+
+.article-meta span {
+  color: #374151 !important;
+}
+
+.article-meta b {
+  color: #111827 !important;
+  font-weight: 800 !important;
+}
+
+.article-meta a {
+  color: #1c8fe3 !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+}
+
+.article-meta a:hover {
+  text-decoration: underline !important;
+}
+
+/* главное изображение */
+.article-main-image {
+  width: 100% !important;
+  margin: 0 auto 46px !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.article-main-image img {
+  width: 100% !important;
+  max-width: 720px !important;
+  height: auto !important;
+
+  display: block !important;
+  object-fit: contain !important;
+}
+
+/* текст статьи */
+.article-body {
+  width: 100% !important;
+
+  font-size: 18px !important;
+  line-height: 1.85 !important;
+  font-weight: 500 !important;
+
+  color: #111827 !important;
+}
+
+.article-body p {
+  margin: 0 0 24px !important;
+
+  font-size: 18px !important;
+  line-height: 1.85 !important;
+  font-weight: 500 !important;
+
+  color: #111827 !important;
+}
+
+.article-body h2 {
+  margin: 44px 0 18px !important;
+
+  font-size: 28px !important;
+  line-height: 1.25 !important;
+  font-weight: 900 !important;
+
+  color: #111827 !important;
+}
+
+.article-body h3 {
+  margin: 34px 0 14px !important;
+
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+  font-weight: 900 !important;
+
+  color: #111827 !important;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 0 0 26px !important;
+  padding-left: 28px !important;
+}
+
+.article-body li {
+  margin-bottom: 10px !important;
+
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+
+  color: #111827 !important;
+}
+
+.article-body strong {
+  font-weight: 900 !important;
+  color: #111827 !important;
+}
+
+/* красное выделение, если нужно как в китайском примере */
+.article-body .red {
+  color: #ef1d1d !important;
+  font-weight: 900 !important;
+}
+
+/* кнопка закрытия */
+.news-modal-close,
+.resource-modal-close,
+.article-modal-close,
+.modal-close {
+  position: sticky !important;
+  top: 24px !important;
+  float: right !important;
+
+  width: 46px !important;
+  height: 46px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: none !important;
+  border-radius: 50% !important;
+
+  background: #2899e6 !important;
+  color: #ffffff !important;
+
+  font-size: 28px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+  z-index: 10 !important;
+}
+
+/* мобильная версия */
+@media screen and (max-width: 700px) {
+  .news-modal-content,
+  .resource-modal-content,
+  .article-modal-content {
+    width: calc(100% - 24px) !important;
+    max-height: calc(100vh - 24px) !important;
+    margin: 12px auto !important;
+  }
+
+  .article-paper {
+    padding: 46px 24px 58px !important;
+  }
+
+  .article-paper h1 {
+    font-size: 28px !important;
+  }
+
+  .article-meta {
+    font-size: 14px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .article-body,
+  .article-body p,
+  .article-body li {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+
+  .article-body h2 {
+    font-size: 24px !important;
+  }
+}
+/* HERO — ЛИНИЯ НА ВСЮ ШИРИНУ ПЕРЕД ПОИСКОМ */
+
+#homeHeroSearch {
+  position: relative !important;
+  margin-top: 95px !important;
+}
+
+#homeHeroSearch::before {
+  content: "" !important;
+
+  position: absolute !important;
+  left: 50% !important;
+  top: -42px !important;
+
+  width: 100vw !important;
+  height: 1px !important;
+
+  transform: translateX(-50%) !important;
+
+  background: rgba(255, 255, 255, 0.55) !important;
+  pointer-events: none !important;
 }

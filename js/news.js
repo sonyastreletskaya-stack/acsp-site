@@ -2,6 +2,10 @@ const newsData = [
   {
     id: "site-launch",
     type: "featured",
+   fullDate: "23.05.2023",
+    source: "ACSP",
+    author: "ACSP",
+    image: "images/logo.png",
     date: "2025",
     title: "Сайт компании ACSP официально заработал",
     excerpt:
@@ -50,8 +54,10 @@ const newsData = [
 
   {
     id: "search-optimization",
-    type: "feed",
-    date: "2025",
+    fullDate: "2025",
+    source: "ACSP",
+    author: "ACSP",
+    image: "images/logo.png",
     title: "Мы оптимизировали подбор запчастей",
     excerpt:
       "На сайте внедрен поисковый модуль: OEM-номера, морфология, фильтрация по наличию, цене и автокоррекция ввода.",
@@ -109,9 +115,31 @@ const modalTitle = document.getElementById("modalTitle");
 const modalBody = document.getElementById("modalBody");
 
 function openNewsModal(newsItem) {
-  modalDate.textContent = newsItem.date;
-  modalTitle.textContent = newsItem.title;
-  modalBody.innerHTML = newsItem.body;
+  modalDate.textContent = "";
+  modalTitle.textContent = "";
+  modalBody.innerHTML = `
+    <article class="article-paper">
+      <h1>${newsItem.title}</h1>
+
+      <div class="article-meta">
+        <span><b>Источник:</b> ${newsItem.source || "ACSP"}</span>
+        <span><b>Дата:</b> ${newsItem.fullDate || newsItem.date || ""}</span>
+        <span><b>Автор:</b> ${newsItem.author || "ACSP"}</span>
+      </div>
+
+      ${
+        newsItem.image
+          ? `<div class="article-main-image">
+               <img src="${newsItem.image}" alt="${newsItem.title}">
+             </div>`
+          : ""
+      }
+
+      <div class="article-body">
+        ${newsItem.body}
+      </div>
+    </article>
+  `;
 
   newsModal.classList.add("is-open");
   document.body.classList.add("modal-open");
@@ -127,10 +155,14 @@ function createFeedItem(newsItem) {
   button.className = "news-feed-item";
   button.type = "button";
 
-button.innerHTML = `
-  <span>${newsItem.date}</span>
-  <strong>${newsItem.title}</strong>
-`;
+  button.innerHTML = `
+    <strong>${newsItem.title}</strong>
+
+    <div class="news-feed-meta">
+      <span>Автор: ${newsItem.author || "ACSP"}</span>
+      <span>${newsItem.fullDate || newsItem.date || ""}</span>
+    </div>
+  `;
 
   button.addEventListener("click", () => openNewsModal(newsItem));
 
@@ -142,12 +174,26 @@ function createFeaturedCard(newsItem) {
   article.className = "featured-news-card";
 
   article.innerHTML = `
-  <div class="featured-news-card-content">
-    <span>${newsItem.date}</span>
-    <h3>${newsItem.title}</h3>
-    <button type="button">Читать полностью</button>
-  </div>
-`;
+    ${
+      newsItem.image
+        ? `<div class="featured-news-image">
+             <img src="${newsItem.image}" alt="${newsItem.title}">
+           </div>`
+        : ""
+    }
+
+    <div class="featured-news-card-content">
+      <h3>${newsItem.title}</h3>
+
+      <p>${newsItem.excerpt || ""}</p>
+
+      <span class="featured-news-date">
+        ${newsItem.fullDate || newsItem.date || ""}
+      </span>
+
+      <button type="button">Подробнее</button>
+    </div>
+  `;
 
   article.querySelector("button").addEventListener("click", () => {
     openNewsModal(newsItem);
