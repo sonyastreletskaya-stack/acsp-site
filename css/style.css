@@ -6004,3 +6004,643 @@ body.modal-open {
     min-height: 220px;
   }
 }
+/* ИСПРАВЛЕНИЕ КАРТОЧЕК НОВОСТЕЙ И ТЕХНИЧЕСКИХ РЕСУРСОВ */
+
+.news-feed-item p {
+  display: none !important;
+}
+
+.featured-news-card {
+  overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  background-image: none !important;
+}
+
+.featured-news-card::before,
+.featured-news-card::after {
+  display: none !important;
+}
+
+.featured-news-image {
+  width: 100% !important;
+  height: 320px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-radius: 26px 26px 0 0 !important;
+}
+
+.featured-news-image img {
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  display: block !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.featured-news-card-content {
+  background: transparent !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.featured-news-card-content p {
+  display: none !important;
+}
+/* ФИКС ГЛАВНОЙ КАРТОЧКИ В НОВОСТЯХ И ТЕХНИЧЕСКИХ РЕСУРСАХ */
+
+.featured-news-card {
+  width: 100% !important;
+  max-width: 620px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  overflow: hidden !important;
+
+  border-radius: 34px !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  background-image: none !important;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12) !important;
+}
+
+.featured-news-card::before,
+.featured-news-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+.featured-news-image {
+  width: 100% !important;
+  height: 340px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  border-radius: 34px 34px 0 0 !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+.featured-news-image img {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  padding: 26px !important;
+  box-sizing: border-box !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  transform: none !important;
+}
+
+.featured-news-card-content {
+  width: 100% !important;
+
+  padding: 30px 34px 34px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  background: transparent !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.featured-news-card-content span {
+  margin-bottom: 12px !important;
+
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.featured-news-card-content h3 {
+  margin: 0 0 22px !important;
+
+  font-size: 32px !important;
+  line-height: 1.14 !important;
+  font-weight: 900 !important;
+
+  color: #ffffff !important;
+}
+
+.featured-news-card-content p {
+  display: none !important;
+}
+
+.featured-news-card-content button {
+  min-height: 46px !important;
+  padding: 0 26px !important;
+
+  border: 2px solid rgba(255, 255, 255, 0.86) !important;
+  border-radius: 24px !important;
+
+  background: transparent !important;
+  color: #ffffff !important;
+
+  font-size: 15px !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+}
+
+.featured-news-card-content button:hover {
+  background: #ffffff !important;
+  color: #168bd0 !important;
+}
+
+
+/* ЛЕВЫЕ МАЛЕНЬКИЕ КАРТОЧКИ БЕЗ ОПИСАНИЯ */
+
+.news-feed-item p {
+  display: none !important;
+}
+
+.news-feed-item {
+  min-height: auto !important;
+  padding: 26px 28px !important;
+}
+
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media screen and (max-width: 900px) {
+  .featured-news-card {
+    max-width: 100% !important;
+  }
+
+  .featured-news-image {
+    height: 260px !important;
+  }
+
+  .featured-news-card-content {
+    padding: 24px 22px 28px !important;
+  }
+
+  .featured-news-card-content h3 {
+    font-size: 24px !important;
+  }
+}
+/* ГЛАВНЫЙ ЭКРАН — ЛЕВОЕ ВЫРАВНИВАНИЕ КАК НА МАКЕТЕ */
+
+.hero {
+  position: relative !important;
+  min-height: calc(100vh - 78px) !important;
+
+  padding: 120px 24px 86px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 151, 221, 0.50) 0%,
+      rgba(8, 151, 221, 0.62) 48%,
+      rgba(8, 151, 221, 0.82) 100%
+    ),
+    url("../images/hero-bg.jpg") center / cover no-repeat !important;
+}
+
+.hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+
+  background: rgba(8, 151, 221, 0.18) !important;
+
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+
+  width: min(1120px, 100%) !important;
+  margin: 0 auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  text-align: left !important;
+  color: #ffffff !important;
+}
+
+/* ЛОГОТИП: НАЧИНАЕТСЯ ТАМ ЖЕ, ГДЕ ПОИСК */
+
+.hero-logo {
+  width: 330px !important;
+  height: auto !important;
+
+  margin: 0 0 28px 0 !important;
+
+  display: block !important;
+}
+
+/* ТЕКСТОВЫЙ БЛОК */
+
+.hero-main-text {
+  width: min(760px, 100%) !important;
+  margin: 0 0 28px 0 !important;
+
+  text-align: left !important;
+}
+
+.hero-brand {
+  margin: 0 0 10px 0 !important;
+
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-main-text h1 {
+  margin: 0 0 18px 0 !important;
+
+  max-width: 760px !important;
+
+  font-size: 42px !important;
+  line-height: 1.16 !important;
+  font-weight: 900 !important;
+
+  color: #ffffff !important;
+  text-align: left !important;
+
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.24) !important;
+}
+
+/* ТРИ СЛОВА — ПОД ЗАГОЛОВКОМ, НЕ ПОД ПОИСКОМ */
+
+.hero-tags {
+  margin: 0 !important;
+
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+
+  gap: 12px 24px !important;
+
+  text-align: left !important;
+}
+
+.hero-tags span {
+  position: relative !important;
+
+  font-size: 18px !important;
+  line-height: 1.3 !important;
+  font-weight: 800 !important;
+
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.hero-tags span:not(:last-child)::after {
+  content: "·" !important;
+  position: absolute !important;
+  right: -16px !important;
+  top: 0 !important;
+
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ПОИСК — НА ТОЙ ЖЕ ЛЕВОЙ ЛИНИИ */
+
+.hero .catalog-search {
+  width: min(760px, 100%) !important;
+  margin: 0 !important;
+
+  display: grid !important;
+  grid-template-columns: 1fr 170px !important;
+  gap: 14px !important;
+
+  transform: none !important;
+}
+
+.hero .catalog-search input {
+  width: 100% !important;
+  height: 54px !important;
+
+  padding: 0 22px !important;
+
+  border: none !important;
+  border-radius: 4px !important;
+
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #24313f !important;
+
+  font-size: 16px !important;
+  font-weight: 500 !important;
+
+  box-sizing: border-box !important;
+}
+
+.hero .catalog-search button {
+  height: 54px !important;
+
+  border: none !important;
+  border-radius: 27px !important;
+
+  background: linear-gradient(135deg, #f0642f, #c94424) !important;
+  color: #ffffff !important;
+
+  font-size: 16px !important;
+  font-weight: 900 !important;
+
+  cursor: pointer !important;
+}
+
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media screen and (max-width: 900px) {
+  .hero {
+    min-height: calc(100vh - 74px) !important;
+    padding: 78px 18px 70px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .hero-logo {
+    width: 220px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-main-text {
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-brand {
+    font-size: 16px !important;
+  }
+
+  .hero-main-text h1 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-tags {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 7px !important;
+  }
+
+  .hero-tags span {
+    font-size: 15px !important;
+  }
+
+  .hero-tags span::after {
+    display: none !important;
+  }
+
+  .hero .catalog-search {
+    width: 100% !important;
+    max-width: 360px !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .hero .catalog-search input {
+    height: 44px !important;
+    border-radius: 22px !important;
+    font-size: 14px !important;
+  }
+
+  .hero .catalog-search button {
+    height: 48px !important;
+    border-radius: 24px !important;
+    font-size: 16px !important;
+  }
+}
+/* ДВИГАЕМ ТОЛЬКО ЛОГОТИП + ТЕКСТ В HERO */
+
+.hero-logo,
+.hero-main-text {
+  transform: translateY(-45px) !important;
+}
+
+/* CONTACTS — ГОРОДА ПРИСУТСТВИЯ */
+
+.contacts-cities {
+  padding: 82px 24px 96px;
+  background:
+    radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, #2899e6 0%, #0f94dc 48%, #0679bd 100%);
+  color: #ffffff;
+}
+
+.contacts-cities-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.contacts-cities h2 {
+  margin: 0 0 42px;
+  text-align: center;
+
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.contacts-city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.city-card {
+  min-height: 360px;
+  padding: 26px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.18);
+}
+
+.city-card-main {
+  grid-column: 1 / -1;
+  min-height: 420px;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.city-card-image {
+  width: 100%;
+  min-height: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.city-card-main .city-card-image {
+  min-height: 300px;
+}
+
+.city-card-image img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  display: block;
+
+  opacity: 0.82;
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.16));
+}
+
+.city-card-main .city-card-image img {
+  max-height: 340px;
+}
+
+.city-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.city-card-content h3 {
+  margin: 0 0 14px;
+
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.city-card-main .city-card-content h3 {
+  font-size: 38px;
+}
+
+.city-card-content p {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.city-card-main .city-card-content p {
+  font-size: 18px;
+}
+
+.city-card-content a {
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.city-card-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* МОБИЛЬНАЯ ВЕРСИЯ ГОРОДОВ */
+
+@media screen and (max-width: 900px) {
+  .contacts-cities {
+    padding: 54px 18px 74px;
+  }
+
+  .contacts-cities h2 {
+    margin-bottom: 30px;
+    text-align: left;
+
+    font-size: 36px;
+  }
+
+  .contacts-city-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .city-card,
+  .city-card-main {
+    grid-column: auto;
+    min-height: auto;
+
+    display: flex;
+    gap: 20px;
+
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .city-card-image,
+  .city-card-main .city-card-image {
+    min-height: 170px;
+  }
+
+  .city-card-image img,
+  .city-card-main .city-card-image img {
+    max-height: 210px;
+  }
+
+  .city-card-content h3,
+  .city-card-main .city-card-content h3 {
+    font-size: 28px;
+  }
+
+  .city-card-content p,
+  .city-card-main .city-card-content p {
+    font-size: 16px;
+  }
+}

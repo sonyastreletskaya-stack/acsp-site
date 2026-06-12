@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Новости ACSP</title>
+  <title>Технические ресурсы ACSP</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,7 +31,7 @@
       </button>
 
       <div class="dropdown catalog-dropdown">
-        <a href="catalog.html" class="dropdown-main-link">Общий каталог</a>
+        <a href="category.html?type=filters" class="dropdown-main-link">Общий каталог</a>
 
         <div class="dropdown-group">
           <a href="category.html?type=dryers" class="dropdown-title">Осушители</a>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="dropdown-group">
-          <a href="category.html?type=filters" class="dropdown-title">Фильтры и сепараторы</a>
+          <a href="filters-separators.html" class="dropdown-title">Фильтры и сепараторы</a>
           <a href="category.html?type=air-filters">Воздушные фильтры</a>
           <a href="category.html?type=oil-filters">Масляные фильтры</a>
           <a href="category.html?type=separators">Сепараторы</a>
@@ -90,7 +90,8 @@
     <a href="#" class="lang">RU</a>
   </div>
 
-  <form class="header-search-panel" action="catalog.html">
+  <form class="header-search-panel" action="category.html">
+    <input type="hidden" name="type" value="filters">
     <input type="text" name="q" placeholder="Введите артикул, OE-номер или модель компрессора">
     <button type="submit">Искать</button>
   </form>
@@ -110,37 +111,18 @@
       <aside class="news-feed">
         <h2>Все материалы</h2>
 
-        <div class="news-list">
-          <div class="news-feed-item empty-news-item">
-            <span>Пока пусто</span>
-            <strong>Материалы готовятся к публикации</strong>
-            <p>
-              В этом разделе пока нет опубликованных технических материалов.
-            </p>
-          </div>
-        </div>
+        <div class="news-list" id="resourcesList"></div>
       </aside>
 
       <section class="news-main">
         <div class="news-main-head">
           <h2>Важное</h2>
           <p>
-            Здесь будут размещаться важные технические материалы, инструкции,
-            статьи, справочные документы и рекомендации ACSP.
+            Инструкции, справочные материалы и рекомендации ACSP
+            по обслуживанию компрессорного оборудования.
           </p>
         </div>
-
-        <div class="featured-news">
-          <article class="featured-news-card empty-featured-card">
-            <div class="featured-news-card-content">
-              <span>Пока пусто</span>
-              <h3>Здесь пока ничего нет</h3>
-              <p>
-                Технические ресурсы находятся в подготовке. Материалы будут добавлены позже.
-              </p>
-            </div>
-          </article>
-        </div>
+        <div class="featured-news" id="featuredResources"></div>
       </section>
 
     </div>
@@ -149,15 +131,13 @@
 </main>
 
 
-<div class="news-modal" id="newsModal">
-  <div class="news-modal-overlay" id="newsModalOverlay"></div>
-  <article class="news-modal-content">
-    <button class="news-modal-close" id="newsModalClose" type="button">×</button>
+<div class="news-modal" id="resourcesModal">
+  <div class="news-modal-overlay" id="resourcesModalOverlay"></div>
 
-    <p class="news-modal-date" id="modalDate"></p>
-    <h2 id="modalTitle"></h2>
-    <div id="modalBody" class="news-modal-body"></div>
-  </article>
+  <div class="news-modal-content">
+    <button class="news-modal-close" id="resourcesModalClose" type="button">×</button>
+    <div class="news-modal-body" id="resourcesModalBody"></div>
+  </div>
 </div>
 
 
@@ -197,16 +177,17 @@
     <div class="footer-column">
       <h3>Каталог</h3>
       <a href="category.html?type=dryers">Осушители</a>
-      <a href="category.html?type=filters">Фильтры<br>и сепараторы</a>
-      <a href="category.html?type=parts">Запчасти</a>
+      <a href="filters-separators.html">Фильтры<br>и сепараторы</a>
+      <a href="parts-valves.html">Запчасти<br>и клапаны</a>
       <a href="category.html?type=oils">Компрессорные<br>масла</a>
     </div>
 
     <div class="footer-column">
       <h3>Поддержка</h3>
-      <a href="catalog.html">Подбор по OE-<br>номерам</a>
-      <a href="resources.html">Центр загрузок</a>
-      <a href="resources.html">Частые вопросы</a>
+      <a href="category.html?type=filters">Подбор по OE-<br>номерам</a>
+      <a href="resources.html">Технические<br>ресурсы</a>
+      <a href="contacts.html">Связаться<br>со специалистом</a>
+      <a href="privacy.html">Политика<br>персональных данных</a>
     </div>
 
     <div class="footer-column footer-contacts">
@@ -232,13 +213,13 @@
 
   <div class="footer-bottom">
     <a href="https://sonyastreletskaya-stack.github.io/grooxo-site/" target="_blank" rel="noopener noreferrer">
-        Дизайн и разработка сайта: GROOXO
-        </a>
+      Дизайн и разработка сайта: GROOXO
+    </a>
   </div>
 </footer>
 
+
 <script src="js/main.js"></script>
+<script src="js/resources.js"></script>
 </body>
 </html>
-
-

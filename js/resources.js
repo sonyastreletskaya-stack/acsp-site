@@ -473,20 +473,21 @@ function renderResources() {
       const card = document.createElement("article");
       card.className = "featured-news-card";
 
-      card.innerHTML = `
-        ${
-          item.image
-            ? `<div class="featured-news-image"><img src="${item.image}" alt="${item.title}"></div>`
-            : ""
-        }
+card.innerHTML = `
+  ${
+    item.image
+      ? `<div class="featured-news-image">
+           <img src="${item.image}" alt="${item.title}">
+         </div>`
+      : ""
+  }
 
-        <div class="featured-news-card-content">
-        <span>${item.tag}</span>
-          <h3>${item.title}</h3>
-          <p>${item.short}</p>
-          <button type="button">Читать полностью</button>
-        </div>
-      `;
+  <div class="featured-news-card-content">
+    <span>${item.tag}</span>
+    <h3>${item.title}</h3>
+    <button type="button">Читать полностью</button>
+  </div>
+`;
 
       card.addEventListener("click", () => openResourcesModal(item));
       featuredResources.appendChild(card);
@@ -494,11 +495,11 @@ function renderResources() {
       const feedItem = document.createElement("article");
       feedItem.className = "news-feed-item";
 
-      feedItem.innerHTML = `
-        <span>${item.date}</span>
-        <strong>${item.title}</strong>
-        <p>${item.short}</p>
-      `;
+feedItem.innerHTML = `
+  <span>${item.date}</span>
+  <strong>${item.title}</strong>
+`;
+
 
       feedItem.addEventListener("click", () => openResourcesModal(item));
       resourcesList.appendChild(feedItem);

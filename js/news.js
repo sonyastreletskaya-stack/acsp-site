@@ -127,11 +127,10 @@ function createFeedItem(newsItem) {
   button.className = "news-feed-item";
   button.type = "button";
 
-  button.innerHTML = `
-    <span>${newsItem.date}</span>
-    <strong>${newsItem.title}</strong>
-    <p>${newsItem.excerpt}</p>
-  `;
+button.innerHTML = `
+  <span>${newsItem.date}</span>
+  <strong>${newsItem.title}</strong>
+`;
 
   button.addEventListener("click", () => openNewsModal(newsItem));
 
@@ -143,13 +142,12 @@ function createFeaturedCard(newsItem) {
   article.className = "featured-news-card";
 
   article.innerHTML = `
-    <div class="featured-news-card-content">
-      <span>${newsItem.date}</span>
-      <h3>${newsItem.title}</h3>
-      <p>${newsItem.excerpt}</p>
-      <button type="button">Читать полностью</button>
-    </div>
-  `;
+  <div class="featured-news-card-content">
+    <span>${newsItem.date}</span>
+    <h3>${newsItem.title}</h3>
+    <button type="button">Читать полностью</button>
+  </div>
+`;
 
   article.querySelector("button").addEventListener("click", () => {
     openNewsModal(newsItem);
