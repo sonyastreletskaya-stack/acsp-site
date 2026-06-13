@@ -213,8 +213,10 @@ function hidePrivacyError() {
   privacyCheckWrap.classList.remove("is-error");
 }
 
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby6x5Ue6IMnaXylTFuv_zQNQonCxwkrpzhMAgPML3EwBcIKZF1EM6hUmsZu_NVhxRgA/exec";
+
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (privacyCheckbox && !privacyCheckbox.checked) {
@@ -228,8 +230,29 @@ if (contactForm) {
     }
 
     hidePrivacyError();
-    openFormPopup();
-    contactForm.reset();
+
+    const formData = new FormData(contactForm);
+
+    const data = {
+      phone: formData.get("phone") || "",
+      company: formData.get("company") || "",
+      message: formData.get("message") || "",
+      page: window.location.href
+    };
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data)
+      });
+
+      contactForm.reset();
+      openFormPopup();
+    } catch (error) {
+      console.error("Ошибка отправки заявки:", error);
+      alert("Не удалось отправить заявку. Попробуйте ещё раз.");
+    }
   });
 }
 

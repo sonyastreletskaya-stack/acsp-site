@@ -11197,3 +11197,57 @@ img,
     color: #ffffff !important;
   }
 }
+/* =========================================================
+   ШИРОКИЕ ЭКРАНЫ 2K / 2560px — НЕ РАСТЯГИВАЕМ САЙТ
+   ========================================================= */
+
+@media screen and (min-width: 1600px) {
+
+  .site-header {
+    padding-left: max(80px, calc((100vw - 1280px) / 2)) !important;
+    padding-right: max(80px, calc((100vw - 1280px) / 2)) !important;
+  }
+
+  #homeHeroContent,
+  .acsp-hover-slider,
+  .catalog-intro,
+  .catalog-tabs-wrapper,
+  .benefits,
+  .news-page-head,
+  .news-layout,
+  .contacts-head,
+  .contacts-map,
+  .contacts-cities-inner,
+  .contacts-engineers-inner,
+  .contacts-form-wrapper,
+  .about-acsp-inner,
+  .dealers-hero-inner,
+  .dealers-section-head,
+  .dealers-conditions-grid,
+  .dealers-why-inner,
+  .purchase-hero-inner,
+  .purchase-modules-inner,
+  .footer-inner {
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  #homeHero {
+    min-height: 700px !important;
+    height: 700px !important;
+  }
+
+  #homeHeroContent {
+    width: 1280px !important;
+  }
+
+  #homeHeroTop {
+    transform: translate(120px, -60px) !important;
+  }
+
+  #homeHeroSearch {
+    width: 760px !important;
+    margin-left: 120px !important;
+  }
+}
