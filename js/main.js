@@ -1,3 +1,62 @@
+document.addEventListener("DOMContentLoaded", () => {
+  loadHTML("header-placeholder", "header.html", initHeaderMenu);
+  loadHTML("footer-placeholder", "footer.html");
+});
+
+function loadHTML(elementId, filePath, callback) {
+  const element = document.getElementById(elementId);
+
+  if (!element) {
+    if (callback) callback();
+    return;
+  }
+
+  fetch(filePath)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Не удалось загрузить ${filePath}`);
+      }
+
+      return response.text();
+    })
+    .then(html => {
+      element.innerHTML = html;
+
+      if (callback) callback();
+    })
+    .catch(error => {
+      console.error("Ошибка загрузки HTML:", error);
+    });
+}
+
+function initHeaderMenu() {
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  const headerActions = document.querySelector(".header-actions");
+  const catalogButton = document.querySelector(".catalog-link");
+  const navItem = document.querySelector(".nav-item");
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("is-open");
+      mainNav.classList.toggle("is-open");
+
+      if (headerActions) {
+        headerActions.classList.toggle("is-open");
+      }
+
+      document.body.classList.toggle("menu-open");
+    });
+  }
+
+  if (catalogButton && navItem) {
+    catalogButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      navItem.classList.toggle("is-open");
+    });
+  }
+}
+
 const catalogData = {
   dryers: {
     image: "images/dryers.jpg",
