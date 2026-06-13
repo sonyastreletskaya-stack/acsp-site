@@ -30,7 +30,6 @@ input {
   font-family: inherit;
 }
 
-
 /* ШАПКА */
 
 .site-header {
@@ -90,21 +89,11 @@ input {
   position: relative;
 }
 
-.catalog-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .catalog-arrow {
   display: inline-block;
   font-size: 12px;
   line-height: 1;
   transition: transform 0.25s ease;
-}
-
-.nav-item:hover .catalog-arrow {
-  transform: rotate(180deg);
 }
 
 .dropdown {
@@ -128,12 +117,6 @@ input {
   visibility: hidden;
   transform: translateY(8px);
   transition: 0.25s ease;
-}
-
-.nav-item:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 
 .dropdown a {
@@ -200,7 +183,6 @@ input {
 .nav-item:hover .catalog-arrow {
   transform: rotate(180deg);
 }
-
 
 /* Поиск в шапке */
 
@@ -355,7 +337,6 @@ input {
     url("../images/hero-bg.jpg") center / cover no-repeat;
 }
 
-
 .hero-content {
   width: 100%;
   max-width: 820px;
@@ -387,7 +368,6 @@ input {
 
   color: #ffffff;
 }
-
 
 /* НАДПИСЬ ПЕРЕД раскрывающими карточками */
 
@@ -692,7 +672,6 @@ input {
   background: #ffffff;
   color: #2899e6;
 }
-
 
 /* ЧЕТВЁРТЫЙ БЛОК */
 
@@ -1121,7 +1100,6 @@ input {
   color: rgba(255, 255, 255, 0.46);
 }
 
-
 /* Адаптив подвала */
 
 @media screen and (max-width: 1050px) {
@@ -1378,7 +1356,6 @@ input {
   color: #2899e6;
 }
 
-
 /* МОДАЛЬНОЕ ОКНО НОВОСТИ */
 
 body.modal-open {
@@ -1490,7 +1467,6 @@ body.modal-open {
   border-left: 4px solid #2899e6;
   background: rgba(40, 153, 230, 0.08);
 }
-
 
 /* АДАПТИВ НОВОСТЕЙ */
 
@@ -1627,16 +1603,10 @@ body.modal-open {
   display: block;
 }
 
-
 /* ГОРОДА */
 
 .contacts-cities-section {
   padding: 78px 24px;
-}
-
-.contacts-cities-inner {
-  width: min(1180px, 100%);
-  margin: 0 auto;
 }
 
 .contacts-section-title {
@@ -1723,7 +1693,6 @@ body.modal-open {
 .city-card-content a:hover {
   color: #dff6ff;
 }
-
 
 /* ИНЖЕНЕРЫ */
 
@@ -1816,7 +1785,6 @@ body.modal-open {
   object-fit: contain;
 }
 
-
 /* ФОРМА */
 
 .contacts-form-section {
@@ -1900,7 +1868,6 @@ body.modal-open {
   transform: translateY(-2px);
   box-shadow: 0 16px 34px rgba(169, 69, 34, 0.28);
 }
-
 
 /* АДАПТИВ КОНТАКТОВ */
 
@@ -2347,7 +2314,6 @@ body.modal-open {
   }
 }
 
-
 /* 2. ТРИ ПРИНЦИПА */
 
 .about-principles {
@@ -2396,7 +2362,6 @@ body.modal-open {
 
   color: rgba(36, 49, 63, 0.78);
 }
-
 
 /* 3. НАМ ДОВЕРЯЮТ */
 
@@ -2480,7 +2445,6 @@ body.modal-open {
   color: #24313f;
 }
 
-
 /* СОБСТВЕННОЕ ПРОИЗВОДСТВО */
 
 .about-production-grid {
@@ -2538,7 +2502,6 @@ body.modal-open {
   color: #2899e6;
   font-weight: 800;
 }
-
 
 /* 4. БРЕНДЫ */
 
@@ -2637,7 +2600,6 @@ body.modal-open {
   height: auto;
   display: block;
 }
-
 
 /* 5. МОЛОДАЯ КОМАНДА */
 
@@ -2760,7 +2722,6 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.84);
 }
 
-
 /* 6. ОФИС */
 
 .about-office {
@@ -2838,7 +2799,6 @@ body.modal-open {
 .about-office-text strong {
   color: #ffffff;
 }
-
 
 /* АДАПТИВ ABOUT */
 
@@ -2948,7 +2908,6 @@ body.modal-open {
   background: #2899e6 !important;
 }
 
-
 /* БЛОК "НАМ ДОВЕРЯЮТ" НА ВСЮ ШИРИНУ */
 
 .about-trust {
@@ -3046,7 +3005,6 @@ body.modal-open {
   color: #24313f !important;
 }
 
-
 /* БЛОК "СОБСТВЕННОЕ ПРОИЗВОДСТВО" НА ВСЮ ШИРИНУ */
 
 .about-production-grid {
@@ -3115,7 +3073,6 @@ body.modal-open {
   color: #2899e6 !important;
 }
 
-
 /* БЛОК С ЛОГОТИПОМ И ТЕКСТОМ НА ВСЮ ШИРИНУ */
 
 .about-brands {
@@ -3171,7 +3128,6 @@ body.modal-open {
 
   color: #1686a8 !important;
 }
-
 
 /* ГРАДИЕНТ "СОВМЕСТИМЫЕ БРЕНДЫ" НА ВСЮ ШИРИНУ */
 
@@ -3246,7 +3202,6 @@ body.modal-open {
   object-fit: contain !important;
 }
 
-
 /* УБИРАЕМ БЕЛЫЕ КАРТОЧКИ ТАМ, ГДЕ ОНИ НЕ НУЖНЫ */
 
 .about-team-inner,
@@ -3263,7 +3218,6 @@ body.modal-open {
 .about-office {
   background: #2899e6 !important;
 }
-
 
 /* АДАПТИВ */
 
@@ -3329,7 +3283,6 @@ body.modal-open {
   background: #2899e6;
   color: #ffffff;
 }
-
 
 /* 1. HERO */
 
@@ -3417,7 +3370,6 @@ body.modal-open {
 
   color: #ffffff;
 }
-
 
 /* 2. УСЛОВИЯ */
 
@@ -3516,7 +3468,6 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.82);
 }
 
-
 /* 3. ПОЧЕМУ ВЫБИРАЮТ */
 
 .dealers-why {
@@ -3606,7 +3557,6 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.82);
 }
 
-
 /* 4. СОВМЕСТИМЫЕ БРЕНДЫ */
 
 .dealers-brands {
@@ -3681,7 +3631,6 @@ body.modal-open {
   display: block;
   object-fit: contain;
 }
-
 
 /* 5. ПРОЦЕСС */
 
@@ -3822,7 +3771,6 @@ body.modal-open {
   background: #111827;
 }
 
-
 /* 6. FAQ */
 
 .dealers-faq {
@@ -3901,7 +3849,6 @@ body.modal-open {
 
   color: rgba(255, 255, 255, 0.82);
 }
-
 
 /* АДАПТИВ DEALERS */
 
@@ -4020,7 +3967,6 @@ body.modal-open {
   color: rgba(36, 49, 63, 0.76);
 }
 
-
 /* БЕГУЩАЯ СТРОКА */
 
 .category-marquee {
@@ -4059,7 +4005,6 @@ body.modal-open {
     transform: translateX(-50%);
   }
 }
-
 
 /* СЕТКА КАТАЛОГА */
 
@@ -5633,7 +5578,6 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.82);
 }
 
-
 /* ВЕРХНИЕ 4 ЦВЕТНЫЕ ПЛАШКИ */
 
 .filter-color-tabs {
@@ -5713,7 +5657,6 @@ body.modal-open {
 .tab-gold {
   background: linear-gradient(135deg, #b79a51, #d1b468);
 }
-
 
 /* ШАХМАТНЫЕ БЛОКИ */
 
@@ -5906,7 +5849,6 @@ body.modal-open {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
 }
 
-
 /* АДАПТИВ */
 
 @media screen and (max-width: 900px) {
@@ -6034,10 +5976,6 @@ body.modal-open {
   position: relative !important;
   z-index: 2 !important;
 }
-
-.featured-news-card-content p {
-  display: none !important;
-}
 /* ФИКС ГЛАВНОЙ КАРТОЧКИ В НОВОСТЯХ И ТЕХНИЧЕСКИХ РЕСУРСАХ */
 
 .featured-news-card {
@@ -6054,12 +5992,6 @@ body.modal-open {
   background-image: none !important;
 
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12) !important;
-}
-
-.featured-news-card::before,
-.featured-news-card::after {
-  display: none !important;
-  content: none !important;
 }
 
 .featured-news-image {
@@ -6153,7 +6085,6 @@ body.modal-open {
   color: #168bd0 !important;
 }
 
-
 /* ЛЕВЫЕ МАЛЕНЬКИЕ КАРТОЧКИ БЕЗ ОПИСАНИЯ */
 
 .news-feed-item p {
@@ -6164,7 +6095,6 @@ body.modal-open {
   min-height: auto !important;
   padding: 26px 28px !important;
 }
-
 
 /* МОБИЛЬНАЯ ВЕРСИЯ */
 
@@ -6506,7 +6436,6 @@ body.modal-open {
   text-decoration: underline;
 }
 
-
 /* МОБИЛЬНАЯ ВЕРСИЯ ГОРОДОВ */
 
 @media screen and (max-width: 900px) {
@@ -6681,7 +6610,6 @@ main .article-meta span {
   align-items: flex-start !important;
   text-align: left !important;
 }
-
 
 .hero-logo {
   margin-left: 0 !important;
@@ -6939,7 +6867,6 @@ main .article-meta span {
   color: rgba(255, 255, 255, 0.86) !important;
 }
 
-
 /* МОБИЛЬНАЯ ВЕРСИЯ */
 
 @media screen and (max-width: 900px) {
@@ -7008,8 +6935,6 @@ main .article-meta span {
   content: none !important;
   display: none !important;
 }
-
-
 
 /* мобильная версия — линии убираем */
 @media screen and (max-width: 900px) {
@@ -7152,7 +7077,6 @@ main .article-meta span {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-
 /* =========================================================
    ШАПКА — МЕНЮ БОЛЕЕ РАСТЯНУТОЕ
    ========================================================= */
@@ -7186,7 +7110,6 @@ main .article-meta span {
   align-items: center !important;
   gap: 28px !important;
 }
-
 
 /* =========================================================
    МОБИЛЬНАЯ ВЕРСИЯ
@@ -7257,42 +7180,6 @@ main .article-meta span {
   gap: 18px !important;
 
   transform: none !important;
-  box-sizing: border-box !important;
-}
-
-.hero #heroSearch input[type="text"] {
-  width: 100% !important;
-  height: 60px !important;
-
-  padding: 0 26px !important;
-
-  border: none !important;
-  border-radius: 6px !important;
-
-  background: rgba(255, 255, 255, 0.94) !important;
-  color: #24313f !important;
-
-  font-size: 16px !important;
-  font-weight: 500 !important;
-
-  box-sizing: border-box !important;
-}
-
-.hero #heroSearch button {
-  width: 210px !important;
-  height: 60px !important;
-
-  border: none !important;
-  border-radius: 30px !important;
-
-  background: linear-gradient(135deg, #f0642f, #c94424) !important;
-  color: #ffffff !important;
-
-  font-size: 16px !important;
-  font-weight: 900 !important;
-
-  cursor: pointer !important;
-
   box-sizing: border-box !important;
 }
 
@@ -7559,24 +7446,6 @@ main .article-meta span {
   box-sizing: border-box !important;
 }
 
-#homeHeroSearch button {
-  width: 220px !important;
-  height: 62px !important;
-
-  border: none !important;
-  border-radius: 31px !important;
-
-  background: linear-gradient(135deg, #f0642f, #c94424) !important;
-  color: #ffffff !important;
-
-  font-size: 16px !important;
-  line-height: 62px !important;
-  font-weight: 900 !important;
-
-  cursor: pointer !important;
-  box-sizing: border-box !important;
-}
-
 /* убираем влияние старого catalog-search внутри hero */
 #homeHero .catalog-search {
   all: unset !important;
@@ -7826,7 +7695,6 @@ main .article-meta span {
   color: rgba(255, 255, 255, 0.86);
 }
 
-
 .purchase-modules {
   padding: 30px 24px 110px;
   background: #2899e6;
@@ -7893,7 +7761,6 @@ main .article-meta span {
   color: rgba(255, 255, 255, 0.86);
 }
 
-
 .purchase-points {
   margin-top: 34px;
 
@@ -7929,7 +7796,6 @@ main .article-meta span {
 
   color: rgba(255, 255, 255, 0.78);
 }
-
 
 .purchase-steps {
   display: flex;
@@ -8008,7 +7874,6 @@ main .article-meta span {
   box-shadow: 0 14px 30px rgba(201, 80, 22, 0.28);
 }
 
-
 @media screen and (max-width: 900px) {
   .purchase-hero {
     padding: 62px 18px 46px;
@@ -8062,8 +7927,6 @@ main .article-meta span {
     width: 100%;
   }
 }
-
-
 
 /* HERO — ПОИСК УЖЕ + ЖЁЛТАЯ КНОПКА */
 
@@ -8189,7 +8052,6 @@ main .article-meta span {
   color: #ffffff;
 }
 
-
 /* ШАПКА СТРАНИЦЫ */
 
 .general-catalog-head {
@@ -8238,7 +8100,6 @@ main .article-meta span {
 
   color: rgba(255, 255, 255, 0.82);
 }
-
 
 /* =========================================================
    ВЕРХНИЕ 4 ПЛАШКИ-КАРТОЧКИ
@@ -8307,7 +8168,7 @@ main .article-meta span {
   line-height: 1.32;
   font-weight: 700;
 
-  color: none;
+  color: inherit;
 }
 
 .panel-yellow h2,
@@ -8345,7 +8206,6 @@ main .article-meta span {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
-
 /* ЦВЕТА ПЛАШЕК */
 
 .panel-yellow {
@@ -8363,7 +8223,6 @@ main .article-meta span {
 .panel-blue {
   background: linear-gradient(180deg, #173d56 0%, #12344b 100%);
 }
-
 
 /* =========================================================
    НИЖНИЕ ШАХМАТНЫЕ БЛОКИ
@@ -8455,7 +8314,7 @@ main .article-meta span {
   line-height: 1.08;
   font-weight: 900;
 
-  color: none;
+  color: inherit;
 }
 
 .general-catalog-row-content p {
@@ -8495,7 +8354,6 @@ main .article-meta span {
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
 }
-
 
 /* =========================================================
    АДАПТИВ
@@ -8902,7 +8760,6 @@ main .article-meta span {
   color: #ffffff !important;
 }
 
-
 /* СЕТКА НОВОСТЕЙ */
 
 .news-layout {
@@ -8914,7 +8771,6 @@ main .article-meta span {
   gap: 42px !important;
   align-items: start !important;
 }
-
 
 /* ЛЕВАЯ КОЛОНКА */
 
@@ -8944,7 +8800,6 @@ main .article-meta span {
   flex-direction: column !important;
   gap: 18px !important;
 }
-
 
 /* МАЛЕНЬКИЕ НОВОСТИ СЛЕВА */
 
@@ -9002,7 +8857,6 @@ main .article-meta span {
   color: rgba(255, 255, 255, 0.74) !important;
 }
 
-
 /* ПРАВАЯ КОЛОНКА */
 
 .news-main {
@@ -9037,7 +8891,6 @@ main .article-meta span {
 
   color: rgba(255, 255, 255, 0.82) !important;
 }
-
 
 /* ВАЖНЫЕ НОВОСТИ */
 
@@ -9162,7 +9015,6 @@ main .article-meta span {
   background: #ffffff !important;
   color: #147fc0 !important;
 }
-
 
 /* АДАПТИВ */
 
@@ -9307,11 +9159,6 @@ main .article-meta span {
   padding-top: 18px;
 }
 
-
-
-
-
-
 /* =========================================================
    ЕДИНЫЙ ШРИФТ НА ВСЕХ СТРАНИЦАХ
    ========================================================= */
@@ -9391,4 +9238,208 @@ button,
 .header-actions a {
   font-weight: 600 !important;
   letter-spacing: 0.01em !important;
+}
+
+
+/* =========================================================
+   ACSP SCALE PATCH — 100% / 125% MONITOR ADAPTATION
+   Добавлено после чистки: не ломает текущую верстку, а сглаживает
+   разницу между масштабами Windows и разными ширинами экранов.
+   ========================================================= */
+
+:root {
+  --acsp-blue: #2899e6;
+  --acsp-dark: #24313f;
+  --acsp-white: #ffffff;
+  --acsp-orange: #e8731c;
+
+  --acsp-page-width: 1180px;
+  --acsp-side-fluid: clamp(18px, 4vw, 52px);
+
+  --acsp-text-fluid: clamp(15px, 0.9vw, 17px);
+  --acsp-small-fluid: clamp(13px, 0.75vw, 15px);
+  --acsp-h1-fluid: clamp(34px, 4vw, 58px);
+  --acsp-h2-fluid: clamp(30px, 3vw, 48px);
+  --acsp-h3-fluid: clamp(20px, 1.8vw, 28px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-size: var(--acsp-text-fluid);
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+/* Общая полезная ширина без прибивания к одному монитору */
+#homeHeroContent,
+.hero-content,
+.catalog-tabs-wrapper,
+.news-page-head,
+.news-layout,
+.category-head,
+.category-layout,
+.product-detail,
+.contacts-head,
+.contacts-map,
+.contacts-cities-inner,
+.contacts-engineers-inner,
+.contacts-form-wrapper,
+.about-acsp-inner,
+.about-principles-inner,
+.about-team-inner,
+.about-office-inner,
+.dealers-hero-inner,
+.dealers-section-head,
+.dealers-conditions-grid,
+.dealers-why-inner,
+.filter-transition-head,
+.filter-color-tabs,
+.filter-transition-list,
+.general-catalog-head,
+.general-catalog-panels,
+.general-catalog-list,
+.purchase-hero-inner,
+.purchase-modules-inner,
+.footer-inner {
+  width: min(var(--acsp-page-width), calc(100% - var(--acsp-side-fluid) * 2)) !important;
+}
+
+/* Шапка: не мельчает на 100%, не раздувается на 125% */
+.site-header {
+  min-height: clamp(72px, 5.4vw, 82px) !important;
+  padding-left: var(--acsp-side-fluid) !important;
+  padding-right: var(--acsp-side-fluid) !important;
+}
+
+.logo img {
+  height: clamp(42px, 3.6vw, 52px) !important;
+}
+
+.main-nav {
+  gap: clamp(18px, 2.1vw, 34px) !important;
+}
+
+.main-nav a,
+.catalog-link,
+.lang {
+  font-size: clamp(14px, 0.9vw, 16px) !important;
+}
+
+/* Главный экран */
+#homeHero {
+  min-height: calc(100svh - 78px) !important;
+  padding-top: clamp(58px, 7vh, 90px) !important;
+  padding-bottom: clamp(70px, 9vh, 110px) !important;
+}
+
+#homeHeroTop {
+  transform: translate(
+    clamp(0px, 7vw, 120px),
+    clamp(-85px, -5vw, -28px)
+  ) !important;
+}
+
+#homeHeroLogo {
+  width: clamp(260px, 38vw, 680px) !important;
+}
+
+#homeHeroText h1 {
+  font-size: clamp(21px, 1.6vw, 28px) !important;
+}
+
+#homeHeroTags {
+  margin-top: clamp(24px, 3vw, 50px) !important;
+}
+
+#homeHeroTags span {
+  font-size: clamp(22px, 2vw, 34px) !important;
+}
+
+#homeHeroSearch {
+  width: min(820px, calc(100% - clamp(0px, 14vw, 360px))) !important;
+  margin-top: clamp(10px, 2vw, 30px) !important;
+  margin-left: clamp(0px, 7vw, 120px) !important;
+  grid-template-columns: minmax(0, 1fr) clamp(155px, 14vw, 220px) !important;
+}
+
+#homeHeroSearch input[type="text"],
+#homeHeroSearch button {
+  height: clamp(48px, 4vw, 62px) !important;
+  font-size: clamp(14px, 0.9vw, 16px) !important;
+}
+
+/* Крупные заголовки по сайту */
+main h1 {
+  font-size: var(--acsp-h1-fluid) !important;
+}
+
+main h2 {
+  font-size: var(--acsp-h2-fluid) !important;
+}
+
+main h3 {
+  font-size: var(--acsp-h3-fluid) !important;
+}
+
+main p,
+main li {
+  font-size: var(--acsp-text-fluid) !important;
+}
+
+@media screen and (max-width: 900px) {
+  #homeHero {
+    min-height: calc(100svh - 74px) !important;
+  }
+
+  #homeHeroContent,
+  .hero-content,
+  .catalog-tabs-wrapper,
+  .news-page-head,
+  .news-layout,
+  .category-head,
+  .category-layout,
+  .product-detail,
+  .contacts-head,
+  .contacts-map,
+  .contacts-cities-inner,
+  .contacts-engineers-inner,
+  .contacts-form-wrapper,
+  .about-acsp-inner,
+  .about-principles-inner,
+  .about-team-inner,
+  .about-office-inner,
+  .dealers-hero-inner,
+  .dealers-section-head,
+  .dealers-conditions-grid,
+  .dealers-why-inner,
+  .filter-transition-head,
+  .filter-color-tabs,
+  .filter-transition-list,
+  .general-catalog-head,
+  .general-catalog-panels,
+  .general-catalog-list,
+  .purchase-hero-inner,
+  .purchase-modules-inner,
+  .footer-inner {
+    width: min(100%, calc(100vw - 36px)) !important;
+  }
+
+  #homeHeroTop {
+    transform: translateY(-22px) !important;
+  }
+
+  #homeHeroSearch {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin-left: 0 !important;
+    grid-template-columns: 1fr !important;
+  }
 }
