@@ -337,7 +337,7 @@ input {
 /* ПЕРВЫЙ БЛОК */
 
 .hero {
-  min-height: 600px;
+  min-height: 400px;
 
   display: flex;
   align-items: center;
@@ -7464,7 +7464,7 @@ main .article-meta span {
 }
 
 #homeHeroLogo {
-  width: 330px !important;
+  width: 680px !important;
   height: auto !important;
 
   display: block !important;
@@ -7492,7 +7492,7 @@ main .article-meta span {
 
 /* три слова */
 #homeHeroTags {
-  margin: 0 !important;
+  margin-top: 50px !important;
 
   display: flex !important;
   flex-wrap: wrap !important;
@@ -7507,7 +7507,7 @@ main .article-meta span {
 #homeHeroTags span {
   position: relative !important;
 
-  font-size: 34px !important;
+  font-size: 27.3px !important;
   line-height: 1.12 !important;
   font-weight: 900 !important;
 
@@ -9306,6 +9306,9 @@ main .article-meta span {
   border-top: 1px solid rgba(255, 255, 255, 0.55);
   padding-top: 18px;
 }
+
+
+
 
 
 
