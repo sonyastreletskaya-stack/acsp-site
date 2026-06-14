@@ -11251,3 +11251,306 @@ img,
     margin-left: 120px !important;
   }
 }
+/* =========================================================
+   ГЛАВНАЯ — НОРМАЛЬНЫЙ ЛОГОТИП И ПОДПИСЬ, БЕЗ АДА
+   ========================================================= */
+
+#homeHeroTop {
+  width: min(820px, 100%) !important;
+  transform: translate(90px, -45px) !important;
+}
+
+.home-hero-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+
+  gap: 8px !important;
+
+  width: fit-content !important;
+  max-width: 620px !important;
+
+  margin: 0 0 30px 0 !important;
+}
+
+#homeHeroLogo {
+  width: 360px !important;
+  max-width: 360px !important;
+  height: auto !important;
+
+  display: block !important;
+  flex: none !important;
+}
+
+.home-hero-subtitle {
+  width: auto !important;
+  max-width: 520px !important;
+
+  margin: 0 !important;
+
+  font-size: 17px !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+
+  color: #ffffff !important;
+  text-align: left !important;
+
+  white-space: normal !important;
+}
+
+#homeHeroTags {
+  margin-top: 0 !important;
+}
+
+#homeHeroTags span {
+  font-size: 27px !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+}
+
+@media screen and (max-width: 900px) {
+  #homeHeroTop {
+    width: 100% !important;
+    transform: translateY(-20px) !important;
+  }
+
+  .home-hero-brand {
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  #homeHeroLogo {
+    width: 240px !important;
+    max-width: 240px !important;
+  }
+
+  .home-hero-subtitle {
+    max-width: 320px !important;
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+
+  #homeHeroTags span {
+    font-size: 20px !important;
+  }
+}
+/* =========================================================
+   ФИНАЛЬНЫЙ ФИКС HERO ЛОГОТИПА — ПОСЛЕДНИЙ В CSS
+   ========================================================= */
+
+body #homeHero #homeHeroContent #homeHeroTop {
+  width: min(760px, 100%) !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  margin: 0 0 28px 0 !important;
+
+  transform: translate(105px, -55px) !important;
+}
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+
+  gap: 8px !important;
+
+  width: auto !important;
+  max-width: 520px !important;
+
+  margin: 0 0 28px 0 !important;
+}
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand #homeHeroLogo {
+  width: 320px !important;
+  max-width: 320px !important;
+  min-width: 0 !important;
+  height: auto !important;
+
+  display: block !important;
+  flex: 0 0 auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-subtitle {
+  display: block !important;
+
+  width: auto !important;
+  max-width: 520px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-size: 17px !important;
+  line-height: 1.28 !important;
+  font-weight: 800 !important;
+
+  color: #ffffff !important;
+  text-align: left !important;
+
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+body #homeHero #homeHeroTags {
+  margin-top: 0 !important;
+}
+
+body #homeHero #homeHeroTags span {
+  font-size: 27px !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+}
+
+/* поиск оставляем ниже и не даём ему налезать */
+body #homeHero #homeHeroSearch {
+  margin-top: -20px !important;
+}
+
+/* мобильная версия */
+@media screen and (max-width: 900px) {
+  body #homeHero #homeHeroContent #homeHeroTop {
+    width: 100% !important;
+    transform: translate(0, -18px) !important;
+  }
+
+  body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand {
+    max-width: 100% !important;
+    margin-bottom: 22px !important;
+  }
+
+  body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand #homeHeroLogo {
+    width: 230px !important;
+    max-width: 230px !important;
+  }
+
+  body #homeHero #homeHeroContent #homeHeroTop .home-hero-subtitle {
+    max-width: 320px !important;
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+
+  body #homeHero #homeHeroTags span {
+    font-size: 20px !important;
+  }
+
+  body #homeHero #homeHeroSearch {
+    margin-top: 0 !important;
+  }
+}
+/* =========================================================
+   HERO — ЛОГОТИП И ПОДПИСЬ В ОДНУ СТРОКУ
+   ========================================================= */
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  gap: 18px !important;
+
+  width: auto !important;
+  max-width: 760px !important;
+
+  margin: 0 0 30px 0 !important;
+}
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand #homeHeroLogo {
+  width: 320px !important;
+  max-width: 320px !important;
+  height: auto !important;
+
+  flex: 0 0 auto !important;
+  display: block !important;
+}
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-subtitle {
+  display: block !important;
+
+  max-width: 360px !important;
+  margin: 0 !important;
+
+  font-size: 17px !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+
+  color: #ffffff !important;
+  text-align: left !important;
+
+  white-space: normal !important;
+}
+/* =========================================================
+   HERO — ПОДПИСЬ У ЛОГОТИПА В ОДНУ СТРОКУ
+   ========================================================= */
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  gap: 22px !important;
+
+  width: auto !important;
+  max-width: 980px !important;
+
+  margin: 0 0 30px 0 !important;
+}
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand #homeHeroLogo {
+  width: 320px !important;
+  max-width: 320px !important;
+  height: auto !important;
+
+  flex: 0 0 auto !important;
+}
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-subtitle {
+  width: auto !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+
+  color: #ffffff !important;
+  text-align: left !important;
+
+  white-space: nowrap !important;
+}
+@media screen and (max-width: 900px) {
+  body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+
+  body #homeHero #homeHeroContent #homeHeroTop .home-hero-brand #homeHeroLogo {
+    width: 230px !important;
+    max-width: 230px !important;
+  }
+
+  body #homeHero #homeHeroContent #homeHeroTop .home-hero-subtitle {
+    max-width: 320px !important;
+    font-size: 15px !important;
+    white-space: normal !important;
+  }
+}
+/* HERO — ОПУСТИТЬ ПОДПИСЬ У ЛОГОТИПА */
+
+body #homeHero #homeHeroContent #homeHeroTop .home-hero-subtitle {
+  transform: translateY(18px) !important;
+}

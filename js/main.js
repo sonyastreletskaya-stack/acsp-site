@@ -59,7 +59,7 @@ function initHeaderMenu() {
 
 const catalogData = {
   dryers: {
-    image: "images/dryers.jpg",
+    image: "images/dryers.png",
     title: "Осушители и очистка воздуха",
     description:
       "Адсорбционные и рефрижераторные осушители, комплекты магистральных фильтров для подготовки сухого и чистого сжатого воздуха.",
@@ -67,7 +67,7 @@ const catalogData = {
   },
 
   filters: {
-    image: "images/filters.jpg",
+    image: "images/filters.png",
     title: "Фильтры и сепараторы",
     description:
       "Воздушные, масляные, магистральные фильтры и сепараторы для винтовых компрессоров.",
@@ -75,7 +75,7 @@ const catalogData = {
   },
 
   parts: {
-    image: "images/parts-valves.jpeg",
+    image: "images/parts-valves.png",
     title: "Запчасти и клапаны",
     description:
       "Клапаны, датчики, ремкомплекты и электромеханические компоненты для обслуживания компрессорного оборудования.",
@@ -83,7 +83,7 @@ const catalogData = {
   },
 
   oils: {
-    image: "images/oils.jpeg",
+    image: "images/oils.png",
     title: "Компрессорные масла",
     description:
       "Смазочные материалы для винтовых компрессоров, подобранные под интенсивную промышленную эксплуатацию.",
