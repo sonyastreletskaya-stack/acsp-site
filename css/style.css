@@ -3967,30 +3967,6 @@ body.modal-open {
   color: rgba(36, 49, 63, 0.76);
 }
 
-/* БЕГУЩАЯ СТРОКА */
-
-.category-marquee {
-  width: calc(100% + 48px);
-  margin: 0 -24px 48px;
-  overflow: hidden;
-  background: #f4f1e8;
-}
-
-.category-marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 42px;
-  width: max-content;
-  padding: 10px 0 22px;
-}
-
-.category-marquee-track img {
-  width: 160px;
-  height: 105px;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-
 .marquee-full {
   animation: marqueeFullMove 40s linear infinite;
   will-change: transform;
@@ -4281,11 +4257,6 @@ body.modal-open {
 
   .catalog-products-grid {
     grid-template-columns: 1fr;
-  }
-
-  .category-marquee-track img {
-    width: 120px;
-    height: 85px;
   }
 }
 /* СТРАНИЦА ТОВАРА */
