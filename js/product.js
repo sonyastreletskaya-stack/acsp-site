@@ -1,12 +1,13 @@
+const productParams = new URLSearchParams(window.location.search);
+const productId = productParams.get("id");
 
 const productDetail = document.getElementById("productDetail");
 const productNotFound = document.getElementById("productNotFound");
 
-const productParams = new URLSearchParams(window.location.search);
-const productId = productParams.get("id");
-
 function formatProductPrice(price) {
-  if (!price) return "Цена по запросу";
+  if (!price || Number(price) === 0) {
+    return "Цена по запросу";
+  }
 
   return new Intl.NumberFormat("ru-RU").format(price) + " ₽";
 }
@@ -14,10 +15,10 @@ function formatProductPrice(price) {
 function renderProduct(product) {
   if (!productDetail) return;
 
-  document.title = `${product.title} — ACSP`;
-
   const features = Object.entries(product.features || {})
-    .filter(([, value]) => value !== null && value !== undefined && String(value).trim() !== "")
+    .filter(([, value]) => {
+      return value !== null && value !== undefined && String(value).trim() !== "";
+    })
     .map(([key, value]) => {
       return `
         <div class="product-detail-feature">
@@ -33,40 +34,26 @@ function renderProduct(product) {
       <img src="${product.image || "images/no-photo.png"}" alt="${product.title}">
     </div>
 
-    <div class="product-detail-info">
-      <p class="product-detail-label">ACSP Product</p>
+    <div class="product-detail-content">
+      <p class="product-detail-sku">Артикул: ${product.sku}</p>
 
       <h1>${product.title}</h1>
-
-      <p class="product-detail-sku">
-        Артикул: <strong>${product.sku}</strong>
-      </p>
 
       <p class="product-detail-price">
         ${formatProductPrice(product.price)}
       </p>
 
       <p class="product-detail-text">
-        ${product.text || "Для уточнения характеристик и наличия обратитесь к менеджеру ACSP."}
+        ${product.text || "За точной стоимостью и наличием обратитесь к менеджеру ACSP."}
       </p>
 
-      <div class="product-detail-actions">
-        <a href="contacts.html" class="product-request-button">
-          Запросить наличие
-        </a>
-
-        <a href="category.html?type=filters" class="product-catalog-button">
-          В каталог
-        </a>
-      </div>
-    </div>
-
-    <div class="product-detail-specs">
-      <h2>Характеристики</h2>
-
       <div class="product-detail-features">
-        ${features || "<p>Характеристики уточняются.</p>"}
+        ${features}
       </div>
+
+      <a class="product-detail-btn" href="contacts.html">
+        Связаться с менеджером
+      </a>
     </div>
   `;
 }
@@ -77,17 +64,16 @@ function showProductNotFound() {
   }
 
   if (productNotFound) {
-    productNotFound.classList.add("is-open");
+    productNotFound.style.display = "block";
   }
 }
 
 async function loadProduct() {
-  if (!productId) {
-    showProductNotFound();
-    return;
-  }
-
   try {
+    if (!productId) {
+      throw new Error("ID товара не указан");
+    }
+
     const response = await fetch("products.json");
 
     if (!response.ok) {
@@ -96,14 +82,24 @@ async function loadProduct() {
 
     const products = await response.json();
 
-    const product = products.find((item) => String(item.id) === String(productId));
+    const product = products.find((item) => {
+      return String(item.id) === String(productId);
+    });
 
     if (!product) {
-      showProductNotFound();
-      return;
+      throw new Error("Товар не найден");
+    }
+
+    if (productNotFound) {
+      productNotFound.style.display = "none";
+    }
+
+    if (productDetail) {
+      productDetail.style.display = "grid";
     }
 
     renderProduct(product);
+
   } catch (error) {
     console.error(error);
     showProductNotFound();
